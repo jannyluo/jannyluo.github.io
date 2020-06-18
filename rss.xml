@@ -21,10 +21,57 @@
             <webMaster>iamjanny@163.com (This is Janny)</webMaster>
         
         
-        <lastBuildDate>Thu, 18 Jun 2020 19:54:58 +0800</lastBuildDate>
+        <lastBuildDate>Thu, 18 Jun 2020 20:03:58 +0800</lastBuildDate>
         
             <atom:link rel="self" type="application/rss+xml" href="https://jannyluo.github.io/rss.xml" />
         
+        
+            
+                <item>
+                    <title>小程序的生命周期函数</title>
+                    <link>https://jannyluo.github.io/post/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E7%9A%84%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E5%87%BD%E6%95%B0/</link>
+                    <guid isPermaLink="true">https://jannyluo.github.io/post/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E7%9A%84%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E5%87%BD%E6%95%B0/</guid>
+                    <pubDate>Thu, 18 Jun 2020 19:58:32 +0800</pubDate>
+                    <description><![CDATA[<p>在app.js中</p>
+<ol>
+<li>onLaunch( )：应用第一次启动就会触发的事件，获取用户的个人信息</li>
+<li>onShow( )：应用被用户看到，对应用的数据或页面效果重置</li>
+<li>onHide( )：应用被隐藏，暂停或者清除定时器</li>
+<li>onError（err）：应用代码发生报错，收集用户的错误信息，通过异步请求将错误信息发送到后台</li>
+<li>onPageNotFound（ ）：应用第一次启动的时候如果找不到第一个入口页面才会触发，如果页面不存在了，可以通过js的方式跳转页面，重新跳转到第二个首页（不能跳到tabbar）</li>
+</ol>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback"> onPageNotFound（）{
+         Wx.navigateTo({
+                       Url:’/pages/demo09/demo09&#39;
+                        })
+                 }
+</code></pre></div><p>页面的生命周期函数</p>
+<ul>
+<li>onLoad：function（options）{ } :监听页面加载</li>
+<li>onShow：function（）{ }: 监听页面显示</li>
+<li>onReady：function（） { }: 监听页面初次渲染完成</li>
+<li>onHide：function（）{}:监听页面隐藏</li>
+<li>onUnload：function（ ） {}： 关闭当前页面等于卸载当前页面，查看navigator的参数是保留当前页面还是关闭当前页面</li>
+<li>onPullDownRefresh： function（）{}:监听用户下拉动作</li>
+<li>onReachBottom： function（）{}: 监听页面上拉触底事件，要让页面有滚动条才行（加载下一页数据）</li>
+<li>onShareAppMessage： function（）{}:用户点击右上角分享</li>
+<li>onPageScroll ：function（) {}:页面滚动就会触发</li>
+<li>onResize：function（）{}:页面尺寸发生改变的时候触发（横屏竖屏切换）**开启页面的横屏竖屏切换：**在json文件中加入<code>&quot;pageOrientation&quot;：&quot;auto&quot;</code></li>
+<li>onTabItemTap：function（）{}:    1、必须要求当前的页面也是tabbar页面，点击自己的tab item时才会触发</li>
+</ul>
+]]></description>
+                    
+                        
+                    
+                    
+                        
+                            
+                        
+                            
+                        
+                    
+                </item>
+            
         
             
                 <item>
