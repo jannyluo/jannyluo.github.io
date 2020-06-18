@@ -3,6 +3,16 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://jannyluo.github.io/categories/</loc>
+    <lastmod>2020-06-18T19:58:32+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jannyluo.github.io/categories/notes/</loc>
+    <lastmod>2020-06-18T19:58:32+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://jannyluo.github.io/post/</loc>
     <lastmod>2020-06-18T19:58:32+08:00</lastmod>
   </url>
@@ -30,10 +40,6 @@
   <url>
     <loc>https://jannyluo.github.io/post/webpack4.43.0%E5%AE%89%E8%A3%85babel-loader%E6%AD%A5%E9%AA%A4/</loc>
     <lastmod>2020-06-18T17:55:55+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://jannyluo.github.io/categories/</loc>
   </url>
   
   <url>
