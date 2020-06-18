@@ -8,29 +8,29 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>ThisIsJanny</title>
-        <link>http://jannyluo.github.io/</link>
+        <link>https://jannyluo.github.io/</link>
         <description></description>
         <generator>Hugo 0.72.0 https://gohugo.io/</generator>
         
             <language>en</language>
         
         
-            <managingEditor>mail@example.com (HUGO-THEME-TONY)</managingEditor>
+            <managingEditor>iamjanny@163.com (This is Janny)</managingEditor>
         
         
-            <webMaster>mail@example.com (HUGO-THEME-TONY)</webMaster>
+            <webMaster>iamjanny@163.com (This is Janny)</webMaster>
         
         
-        <lastBuildDate>Thu, 18 Jun 2020 18:48:14 +0800</lastBuildDate>
+        <lastBuildDate>Thu, 18 Jun 2020 19:14:14 +0800</lastBuildDate>
         
-            <atom:link rel="self" type="application/rss+xml" href="http://jannyluo.github.io/rss.xml" />
+            <atom:link rel="self" type="application/rss+xml" href="https://jannyluo.github.io/rss.xml" />
         
         
             
                 <item>
                     <title>Webpack4.43.0安装bable-loader步骤</title>
-                    <link>http://jannyluo.github.io/post/webpack4.43.0%E5%AE%89%E8%A3%85babel-loader%E6%AD%A5%E9%AA%A4/</link>
-                    <guid isPermaLink="true">http://jannyluo.github.io/post/webpack4.43.0%E5%AE%89%E8%A3%85babel-loader%E6%AD%A5%E9%AA%A4/</guid>
+                    <link>https://jannyluo.github.io/post/webpack4.43.0%E5%AE%89%E8%A3%85babel-loader%E6%AD%A5%E9%AA%A4/</link>
+                    <guid isPermaLink="true">https://jannyluo.github.io/post/webpack4.43.0%E5%AE%89%E8%A3%85babel-loader%E6%AD%A5%E9%AA%A4/</guid>
                     <pubDate>Thu, 18 Jun 2020 17:55:55 +0800</pubDate>
                     <description><![CDATA[<p>运行打包时报错如下：
 <img src="https://img-blog.csdnimg.cn/20200609201501308.png" alt="截图">
