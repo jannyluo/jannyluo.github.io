@@ -20,12 +20,12 @@
 <link rel="stylesheet" href="/css/remixicon/remixicon.css"><link rel="stylesheet" href="/css/tony.min.2cd909c3b2b4f0eb1f6b8dbe02a8be4ed8a7456895a39f284818ed1e771073c6.css" integrity="sha256-LNkJw7K08Osfa42+Aqi+TtinRWiVo58oSBjtHncQc8Y="/>
 
     <link rel="shortcut icon" href="http://img1.imgtn.bdimg.com/it/u=2050718074,2296818643&amp;fm=26&amp;gp=0.jpg" type="image/x-icon" />
-    <title>problem</title>
+    <title>mini</title>
 
     <meta name="author" content="This is Janny" /><meta name="description" content="" />
 
     
-    <link rel="canonical" href="https://jannyluo.github.io/categories/problem/" />
+    <link rel="canonical" href="https://jannyluo.github.io/categories/mini/" />
 
 </head>
 
@@ -52,7 +52,7 @@
     <nav class="header-nav reveal">
         <div class="cate-nav">
             <div>
-                <a href="/" title="TonyHe" class="header-logo" style="text-decoration: none;">problem</a>
+                <a href="/" title="TonyHe" class="header-logo" style="text-decoration: none;">mini</a>
             </div>
             <div>
                 <a href="/" class="nuxt-link-active">
@@ -109,15 +109,15 @@
                     <ul class="article-list">
                     
                         <li class="article-list-item reveal index-post-list">
-                            <a href="/post/webpack%E6%89%93%E5%8C%85%E6%8A%A5%E9%94%99module/" style="text-decoration: none;">
+                            <a href="/post/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E4%B8%AD%E7%88%B6%E5%AD%90%E7%BB%84%E4%BB%B6%E4%B9%8B%E9%97%B4%E4%BC%A0%E5%80%BC/" style="text-decoration: none;">
                                 <h5 style="margin: 15px 0px 0px; padding: 0px;">
-                                    Webpack打包报错module not found
+                                    小程序中父子组件之间传值
                                 </h5>
                             </a>
                             <p>
-                                 刚接触webpack 使用命令webpack ./src/main.js ./dist/bundle.js打包时报错如下：   后查资料发现是因为版本过高，
-成功的打包命令是： webpack ./src/main.js -o ./dist/bundle.js
- 打包成功的截图： version版本号：4.43.0  ...
+                                子组件向父组件传值 子组件通过自定义参数传递，父组件在properties中接收
+properties：{ Tabs(属性名):{ Type:Array; (数据类型） Value:[ ] } } properties中的值和data中的值一样，可以直接使用
+ 父组件向子组件传值 This.triggerEvent(“方法”,参数）  ...
                             </p>
                             <div class="article-list-footer">
                                 <span class="article-list-date">
@@ -127,15 +127,13 @@
                         </li>
                     
                         <li class="article-list-item reveal index-post-list">
-                            <a href="/post/%E7%9B%B4%E6%8E%A5%E8%BE%93%E5%85%A5webpack%E6%89%93%E5%8C%85%E6%8A%A5%E9%94%99insufficient/" style="text-decoration: none;">
+                            <a href="/post/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E7%9A%84%E7%BC%93%E5%AD%98/" style="text-decoration: none;">
                                 <h5 style="margin: 15px 0px 0px; padding: 0px;">
-                                    直接输入webpack打包报错Insufficient number of arguments or no entry found. 
+                                    小程序的缓存
                                 </h5>
                             </a>
                             <p>
-                                 webpack version：4.43.0*  问题： 直接在项目下输入webpack打包报错
-Insufficient number of arguments or no entry found.
-解决方法：  首先在项目根目录下创建名为：webpack.config.js文件  在创建的webpack.config.js文件编辑如下代码 注意： 修改代码的入口/出口文件的路径和要输出的文件名称  const path = require(&#39;path&#39;) module.exports = { //指定入口，表示webpack要打包哪个文件  entry: path.join(__dirname,&#39;./src/main.js&#39;), //指定出口，表示打包好的文件输出到哪个目录  output:{ path:path.join(__dirname,&#39;./dist&#39;), //指定输出文件的名称  filename:&#39;bundle1.js&#39; } }  保存后重新在terminal输入webpack成功打包：*   ...
+                                 判断本地存储中有没有旧的数据。{time:Date.now(),data:[. ]} 没有旧的数据则重新发送请求 有旧的数据同时旧的数据没有过期则使用本地存储  const Cates=wx.getStorageSync(“cates”) If(!Cates){ this.getCates() }else{ If(Date.now()-Cates.time)&gt;1000*10){ this.getCates() }else{ this.Cates=Cates.data let leftMenuList=this.Cates.map(v=&gt;v.cat_name) let rightContent=this.Cates[0].children this.setData({ leftMenuList rightContent }) } } ...
                             </p>
                             <div class="article-list-footer">
                                 <span class="article-list-date">
@@ -145,16 +143,58 @@ Insufficient number of arguments or no entry found.
                         </li>
                     
                         <li class="article-list-item reveal index-post-list">
-                            <a href="/post/webpack4.43.0%E5%AE%89%E8%A3%85babel-loader%E6%AD%A5%E9%AA%A4/" style="text-decoration: none;">
+                            <a href="/post/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E4%B8%AD%E7%BB%84%E4%BB%B6/" style="text-decoration: none;">
                                 <h5 style="margin: 15px 0px 0px; padding: 0px;">
-                                    Webpack4.43.0安装bable-loader步骤
+                                    小程序中组件
                                 </h5>
                             </a>
                             <p>
-                                运行打包时报错如下： webpack version：4.43.0
-由于在webpack中默认只能处理部分ES6的语法，要借助第三方loader来帮助webpack将高级的语法转换成低级的语法
-首先要安装的三个：babel-loader、babel-core、babel-preset-env
- 安装babel-loader（不要把babel打成bable！！！！！！）  npm i babel-loader -D 安装babel-core  npm install -D babel-core 安装babel-preset-env  npm install -D babel-preset-env 这三个包安装好之后在项目的根目录创建一个./babelrc文件， ./babelrc的配置：  { &#34;presets&#34;: [&#34;env&#34;] } 在webpack.config.js中的module对象的rules属性添加一项：  {test:/\.js$/,use:&#39;babel-loader&#39;,exclude:&#39;/node_modules/&#39;} 保存运行截图 提示还需要两个插件才能正常的运行 安装需要的两个插件  npm i @babel/plugin-proposal-class-properties npm i @babel/plugin-syntax-class-properties 安装完毕之后在./babelrc中添加配置  { &#34;presets&#34;: [&#34;env&#34;], &#34;plugins&#34;: [&#34;@babel/plugin-proposal-class-properties&#34;,&#34;@babel/plugin-syntax-class-properties&#34;] } 保存重新运行之后可以成功打包。   ...
+                                swiper轮播图组件 &lt;swiper&gt; &lt;swiper-item&gt;&lt;image src=‘’/&gt;&lt;/swiper-item&gt; &lt;/swiper&gt; 默认高度：150px，image也存在默认的高度
+swiper 高度=swiper宽度 * 原图的高度 / 原图的宽度
+ swiper的height： 100vw * 原图的高度 / 原图的宽度  swiper{ Width:100% Height:calc(100vw * 原图的高度 / 原图的宽度) } Image{ Width:100% } 轮播图属性：
+ autoplay interval（修改轮播时间） circular（与interval配合） indicator-dots（面板知识点） indicator-color（未选中的颜色） indicator-active-color（选中的颜色）  ##Navigator导航 属性：
+ url指定页面路径，不加后缀名 open-type 跳转的方式：   默认值 ：navigate（不能跳到tabbar的页面） redirect （跳转不保留原来的页面，没有返回按钮） switchTab（跳转到tabbar页面，并且关闭所有其他非tabbar的页面） reLaunch （关闭所有页面，随便跳转到哪个页面）  ...
+                            </p>
+                            <div class="article-list-footer">
+                                <span class="article-list-date">
+                                    18-06-20
+                                </span>
+                            </div>
+                        </li>
+                    
+                        <li class="article-list-item reveal index-post-list">
+                            <a href="/post/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E4%B8%AD%E7%9A%84%E6%A0%87%E7%AD%BE%E4%BD%BF%E7%94%A8/" style="text-decoration: none;">
+                                <h5 style="margin: 15px 0px 0px; padding: 0px;">
+                                    小程序中的标签使用
+                                </h5>
+                            </a>
+                            <p>
+                                #小程序中的标签 text标签（相当于span标签）：
+ 文本标签 只能嵌套text 长按文字可以复制的属性：selectable 是否解码：decode   block标签不显示
+ View标签相当于div
+ image图片标签：
+ Src指定加载图片的路径（用网络图片） mode决定图片宽高适配：   默认值：scaleToFill（不做纵横比例） aspectFit（保持宽高比，保证图片的长边能够完全显示） aspectFill（保持宽高比，保证图片的短边能够完全显示，少用） widthFix（宽度指定之后，高度会按比例自己调整，常用）  小程序中的图片是直接支持懒加载的 lazy-load   rich-text富文本标签 node属性：
+ 接收标签字符串&lt;rich-text node=“{{html}}&quot;&gt; 接收对象数组   button标签 属性：
+ size（default、mini） type控制按钮颜色 （default：灰色、primary：绿色、warn：红色） plain按钮是否镂空，背景色透明 loading 是否加入等待图标 开放能力： open-type属性 contact：打开客服对话 share：转发（不能把小程序分享到朋友圈） getPhoneNumber：获取手机号码信息：绑定一个事件bindgetphonenumber、在实践的回调函数中通过参数获取信息func（e）{} getUserInfo：获取个人信息: bindgetuserinfo事件 launchApp：在小程序中直接打开app openSetting：打开小程序内置的授权页面 feedback：打开小程序内置的意见反馈页面   icon标签：
+ type属性：类型 size属性 color属性   radio单选框 &lt;radio-group bindchange=‘'&gt; &lt;radio value=''&gt;&lt;/radio&gt;...
+                            </p>
+                            <div class="article-list-footer">
+                                <span class="article-list-date">
+                                    18-06-20
+                                </span>
+                            </div>
+                        </li>
+                    
+                        <li class="article-list-item reveal index-post-list">
+                            <a href="/post/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E7%9A%84%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E5%87%BD%E6%95%B0/" style="text-decoration: none;">
+                                <h5 style="margin: 15px 0px 0px; padding: 0px;">
+                                    小程序的生命周期函数
+                                </h5>
+                            </a>
+                            <p>
+                                在app.js中
+ onLaunch( )：应用第一次启动就会触发的事件，获取用户的个人信息 onShow( )：应用被用户看到，对应用的数据或页面效果重置 onHide( )：应用被隐藏，暂停或者清除定时器 onError（err）：应用代码发生报错，收集用户的错误信息，通过异步请求将错误信息发送到后台 onPageNotFound（ ）：应用第一次启动的时候如果找不到第一个入口页面才会触发，如果页面不存在了，可以通过js的方式跳转页面，重新跳转到第二个首页（不能跳到tabbar）  onPageNotFound（）{ Wx.navigateTo({ Url:’/pages/demo09/demo09&#39; }) } 页面的生命周期函数
+ onLoad：function（options）{ } :监听页面加载 onShow：function（）{ }: 监听页面显示 onReady：function（） { }: 监听页面初次渲染完成 onHide：function（）{}:监听页面隐藏 onUnload：function（ ） {}： 关闭当前页面等于卸载当前页面，查看navigator的参数是保留当前页面还是关闭当前页面 onPullDownRefresh： function（）{}:监听用户下拉动作 onReachBottom： function（）{}: 监听页面上拉触底事件，要让页面有滚动条才行（加载下一页数据） onShareAppMessage： function（）{}:用户点击右上角分享 onPageScroll ：function（) {}:页面滚动就会触发 onResize：function（）{}:页面尺寸发生改变的时候触发（横屏竖屏切换）**开启页面的横屏竖屏切换：**在json文件中加入&quot;pageOrientation&quot;：&quot;auto&quot; onTabItemTap：function（）{}: 1、必须要求当前的页面也是tabbar页面，点击自己的tab item时才会触发  ...
                             </p>
                             <div class="article-list-footer">
                                 <span class="article-list-date">

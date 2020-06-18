@@ -21,10 +21,1103 @@
             <webMaster>iamjanny@163.com (This is Janny)</webMaster>
         
         
-        <lastBuildDate>Thu, 18 Jun 2020 21:44:39 +0800</lastBuildDate>
+        <lastBuildDate>Thu, 18 Jun 2020 22:43:47 +0800</lastBuildDate>
         
             <atom:link rel="self" type="application/rss+xml" href="https://jannyluo.github.io/rss.xml" />
         
+        
+            
+                <item>
+                    <title>Webpack打包报错module not found</title>
+                    <link>https://jannyluo.github.io/post/webpack%E6%89%93%E5%8C%85%E6%8A%A5%E9%94%99module/</link>
+                    <guid isPermaLink="true">https://jannyluo.github.io/post/webpack%E6%89%93%E5%8C%85%E6%8A%A5%E9%94%99module/</guid>
+                    <pubDate>Thu, 18 Jun 2020 22:40:55 +0800</pubDate>
+                    <description><![CDATA[<ul>
+<li>刚接触webpack</li>
+<li>使用命令webpack ./src/main.js ./dist/bundle.js打包时报错如下：
+<img src="https://img-blog.csdnimg.cn/20200607212640167.png" alt="在这里插入图片描述"></li>
+</ul>
+<p>后查资料发现是因为版本过高，</p>
+<p>成功的打包命令是：
+<code>webpack ./src/main.js -o ./dist/bundle.js</code></p>
+<ul>
+<li>打包成功的截图：
+<img src="https://img-blog.csdnimg.cn/20200607214157570.png" alt="在这里插入图片描述">
+<strong>version版本号：4.43.0</strong></li>
+</ul>
+]]></description>
+                    
+                        
+                    
+                    
+                        
+                            
+                                
+                                    
+                                    
+                                    
+                                        <category domain="https://jannyluo.github.io/categories/problem/">problem</category>
+                                    
+                                
+                            
+                        
+                            
+                        
+                    
+                </item>
+            
+        
+            
+                <item>
+                    <title>直接输入webpack打包报错Insufficient number of arguments or no entry found. </title>
+                    <link>https://jannyluo.github.io/post/%E7%9B%B4%E6%8E%A5%E8%BE%93%E5%85%A5webpack%E6%89%93%E5%8C%85%E6%8A%A5%E9%94%99insufficient/</link>
+                    <guid isPermaLink="true">https://jannyluo.github.io/post/%E7%9B%B4%E6%8E%A5%E8%BE%93%E5%85%A5webpack%E6%89%93%E5%8C%85%E6%8A%A5%E9%94%99insufficient/</guid>
+                    <pubDate>Thu, 18 Jun 2020 22:37:47 +0800</pubDate>
+                    <description><![CDATA[<ul>
+<li>webpack version：4.43.0*</li>
+</ul>
+<h2 id="问题">问题：</h2>
+<p>直接在项目下输入webpack打包报错</p>
+<p>Insufficient number of arguments or no entry found.</p>
+<p><img src="https://img-blog.csdnimg.cn/20200607222418402.png" alt="截图"></p>
+<h2 id="解决方法">解决方法：</h2>
+<ol>
+<li>首先在项目根目录下创建名为：webpack.config.js文件
+<img src="https://img-blog.csdnimg.cn/20200607222754493.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MzQxMDQ5MQ==,size_16,color_FFFFFF,t_70" alt="截图"></li>
+<li>在创建的webpack.config.js文件编辑如下代码
+注意：
+修改代码的入口/出口文件的路径和要输出的文件名称</li>
+</ol>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">path</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;path&#39;</span>)
+
+<span style="color:#a6e22e">module</span>.<span style="color:#a6e22e">exports</span> <span style="color:#f92672">=</span> {
+    <span style="color:#75715e">//指定入口，表示webpack要打包哪个文件
+</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">entry</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">path</span>.<span style="color:#a6e22e">join</span>(<span style="color:#a6e22e">__dirname</span>,<span style="color:#e6db74">&#39;./src/main.js&#39;</span>),
+    <span style="color:#75715e">//指定出口，表示打包好的文件输出到哪个目录
+</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">output</span><span style="color:#f92672">:</span>{
+        <span style="color:#a6e22e">path</span><span style="color:#f92672">:</span><span style="color:#a6e22e">path</span>.<span style="color:#a6e22e">join</span>(<span style="color:#a6e22e">__dirname</span>,<span style="color:#e6db74">&#39;./dist&#39;</span>),
+        <span style="color:#75715e">//指定输出文件的名称
+</span><span style="color:#75715e"></span>        <span style="color:#a6e22e">filename</span><span style="color:#f92672">:</span><span style="color:#e6db74">&#39;bundle1.js&#39;</span>
+    }
+}
+</code></pre></div><ul>
+<li>保存后重新在terminal输入webpack成功打包：*
+<img src="https://img-blog.csdnimg.cn/20200607223152799.png" alt="截图"></li>
+</ul>
+]]></description>
+                    
+                        
+                    
+                    
+                        
+                            
+                                
+                                    
+                                    
+                                    
+                                        <category domain="https://jannyluo.github.io/categories/problem/">problem</category>
+                                    
+                                
+                            
+                        
+                            
+                        
+                    
+                </item>
+            
+        
+            
+                <item>
+                    <title>Js小基础</title>
+                    <link>https://jannyluo.github.io/post/js%E5%B0%8F%E5%9F%BA%E7%A1%80/</link>
+                    <guid isPermaLink="true">https://jannyluo.github.io/post/js%E5%B0%8F%E5%9F%BA%E7%A1%80/</guid>
+                    <pubDate>Thu, 18 Jun 2020 22:30:33 +0800</pubDate>
+                    <description><![CDATA[<h2 id="字符串数组">字符串数组：</h2>
+<ol>
+<li>length属性无法获取字符串索引的元素。</li>
+<li>无法使用for循环遍历字符串索引的数组。</li>
+<li>字符串数组可以使用for..in循环。</li>
+</ol>
+<ul>
+<li>数组常用方法：  数组名.方法名</li>
+</ul>
+<ol>
+<li>排序sort（）  ：按字符串顺序排列，非string类型会自动转换为string类型。</li>
+<li>反转数组 reverse（）</li>
+<li>把数组拼接成一个字符串 join（）：默认将数组中的元素以逗号隔开。 以其他形式隔开：var str=array.join(“-“)</li>
+<li>将多个数组拼接成一个数组 concat（）: array.concat(names)      or       array.concat(names, ages)</li>
+<li>toString 转换为字符串： 功能与没有参数的join（）方法相同</li>
+<li>valueOf（）：输出时自动调用valueOf方法，不需要自己调用</li>
+<li>迭代数组</li>
+<li>forEach（）</li>
+<li>向数组末尾添加元素 push（）</li>
+</ol>
+<h2 id="二维数组">二维数组</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">var nums=new array();
+nums[0]=new array();
+nums[1]=new array();
+使用二重循环生成数组，输出数组：
+			var nums=new Array();
+			for(var i=0;i&lt;4;i++){
+				nums[i]=new Array;
+				for(var j=0;j&lt;4;j++){
+					nums[i][j]=parseInt(Math.random()*99+1);
+				}
+			}
+			for(var i=0;i&lt;nums.length;i++){
+				for(var j=0;j&lt;nums[i].length;j++){
+					document.write(nums[i][j]+&#34;&amp;nbsp;&amp;nbsp;&#34;)
+				}
+				document.write(&#34;&lt;/br&gt;&#34;)
+			}
+</code></pre></div><ul>
+<li>冒泡排序法：两两进行比较 ，N个数字，比较N-1轮，每一轮比较N-i-1次。</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">var nums=[20,30,11,22,38,89,2];
+			for(var i=0;i&lt;nums.length-1;i++){
+				for(var j=0;j&lt;nums.length-i-1;j++){
+					if(nums[j]&gt;nums[j+1]){
+						var temp=nums[j];
+						nums[j]=nums[j+1];
+						nums[j+1]=temp;
+					}
+				}
+			}
+			document.write(nums);		
+</code></pre></div><ul>
+<li>特定计算   eval（）</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">var exp=prompt(&#34;请输入一个表达式：&#34;);
+			var x=3,y=8;
+			document.write(eval(exp));
+</code></pre></div><ul>
+<li>判断非数字 isNaN.   非数字返回ture</li>
+<li>判断是否为有限数字  isFinite</li>
+<li>编码 解码  encodeURI    decodeURI: 使用iso8859-1。    escape，unescape：使用utf-8</li>
+</ul>
+<h2 id="定义函数-调用函数">定义函数 调用函数</h2>
+<ul>
+<li>JS中没有重载的概念，后面定义的同名函数会覆盖前面的函数。</li>
+<li>本身NaN等表示的是false</li>
+<li>如果想输入的实参NaN等类型的表示为0，可以使用：</li>
+</ul>
+<ul>
+<li>
+<p>if（！a）{ a=0 }.   a为第一个形参。</p>
+</li>
+<li>
+<p>a=a||0;  b=b||0;</p>
+</li>
+<li>
+<p>使用return关键字返回函数运行结果。</p>
+</li>
+</ul>
+<ul>
+<li>
+<p>javascript代码的解析：</p>
+</li>
+<li>
+<p>变量提升：声明提升，赋值没有提升。</p>
+</li>
+<li>
+<p>预解析（全局作用域）：首先将变量var和函数function的声明提前到作用域的最上面，需要注意的是变量的赋值操作不会提前。</p>
+</li>
+<li>
+<p>然后执行代码，从上往下。</p>
+</li>
+<li>
+<p>当执行函数时会进入函数内部，再次预解析（局部作用域）</p>
+</li>
+<li>
+<p>函数声明： function func1(){}</p>
+</li>
+<li>
+<p>函数表达式：var fn=function(){}    没有函数名 ，称为匿名函数</p>
+</li>
+<li>
+<p>两种方式的区别：函数声明在编写时可以先调用，再声明。 函数表达式必须先定义，再调用。</p>
+</li>
+<li>
+<p>回调函数：回头再调用此函数，当满足一定的条件时再调用,只需要写函数名，不需要写括号，赋值。
+<code>window.onclick=show2.</code></p>
+</li>
+<li>
+<p>数据类型：string , number , boolean,  null, undefined, object, function</p>
+</li>
+<li>
+<p>函数也是一种数据类型。也可以作为一个函数的参数。</p>
+</li>
+</ul>
+<h2 id="匿名函数">匿名函数：</h2>
+<ol>
+<li>一般用于回调。 window.onclick=function(){}</li>
+<li>也可能用于一次性执行的函数.   (function(){}) ();</li>
+</ol>
+<ul>
+<li>在调用函数的时候，也可以用匿名函数作为另一个函数的参数：     show(2,3,function(){});</li>
+</ul>
+<h2 id="javascript的组成-ecmascript-dom-bom">javascript的组成： ECMAScript， DOM， BOM。</h2>
+<ul>
+<li>DOM：document object model</li>
+<li>文档对象模型</li>
+<li>作用：</li>
+</ul>
+<ol>
+<li>获取页面中的元素</li>
+<li>获取/设置元素的属性</li>
+<li>获取/设置元素的样式</li>
+<li>添加/删除元素</li>
+<li>绑定事件——触发响应</li>
+</ol>
+<h2 id="window对象">window对象：</h2>
+<ul>
+<li>常用属性：</li>
+</ul>
+<ul>
+<li>screen（获取计算机屏幕的信息，分辨率等），history，location，  document，用法：对象名.属性名</li>
+</ul>
+<ul>
+<li>常用方法：</li>
+</ul>
+<ol>
+<li>alert(“显示一个带有提示信息和确定按钮的警告对话框“)；</li>
+<li>prompt(“显示一个带有提示信息，确定和取消按钮以及文本输入框的对话框“）</li>
+<li>confirm(“显示一个带有提示信息，确定和取消按钮的对话框“）</li>
+<li>open（url，name，option）打开具有指定名称的新窗口，并加载给定的URL所指定的文档。</li>
+<li>showModalDialog（）在一个模式窗口中显示指定的HTML文档。 模式窗口是打开了新的页面后，不能对原来的页面进行操作。(chrome不支持，火狐支持）</li>
+<li>close（） 关闭当前的窗口</li>
+<li>setTimeout（func，delay）设置一次性定时器，经过指定毫秒值后执行某个函数。</li>
+<li>setInterval（func，delay）设置周期性定时器，周期性循环执行某个函数。</li>
+<li>clearTimeout（timer） 清除一次性定时器</li>
+<li>clearInterval（timer）清除周期性定时器</li>
+</ol>
+<h2 id="常用事件">常用事件</h2>
+<ol>
+<li>onload:	 window.onload=function(){}.    页面加载完成</li>
+<li>onmouseover:  鼠标悬浮在窗体之上</li>
+<li>onmouseout: 鼠标离开窗体</li>
+<li>onclick: 窗体被点击</li>
+<li>onkeydown: 在窗体上按下了某个按键</li>
+<li>onscroll：滚动条滚动</li>
+</ol>
+<h2 id="history对象表示历史">history对象：表示历史</h2>
+<p>方法：</p>
+<ol>
+<li>back（） 相当于后退按钮</li>
+<li>forward（） 相当于前进按钮</li>
+<li>go（URL or number） 加载histor列表中的一个url，或要求浏览器移动指定的页面数。例如 go（-1）</li>
+</ol>
+<h2 id="location对象">location对象：</h2>
+<ul>
+<li>属性：</li>
+<li>href： 跳转     location.href=“”;      获取地址： location.href</li>
+<li>方法：</li>
+<li>reload()</li>
+<li>this表示触发事件的元素，事件源</li>
+</ul>
+<h2 id="document对象">document对象：</h2>
+<ul>
+<li>属性：</li>
+</ul>
+<ol>
+<li>bgcolor； 设置页面背景</li>
+<li>title： 获取标题</li>
+<li>body：获取body</li>
+</ol>
+<ul>
+<li>方法：</li>
+</ul>
+<ol>
+<li>write（） ：在当前页面中输出指定内容</li>
+<li>getElementById（） ：返回指定id的第一个对象的引用</li>
+<li>getElementsByName（）：返回带有指定名称的对象的集合</li>
+<li>getElementsByTagName（）：返回带有指定标签名的对象的集合</li>
+<li></li>
+</ol>
+<ul>
+<li>DOM对象的属性和HTML标签的属性几乎一样</li>
+<li>src，name，id，href，title等</li>
+<li>type， value， checked，selected，disable等</li>
+<li>获取/设置标签中内容的属性：</li>
+<li>innerHTML： 会把内容解析到DOM树上</li>
+<li>innerText：内容会被认为是纯文本</li>
+</ul>
+<h2 id="dom相关类型">DOM相关类型：</h2>
+<ol>
+<li>Node：节点</li>
+<li>Document：文档</li>
+<li>Element：元素                         文档，元素，文本，属性等，都可以称为节点</li>
+<li>Text：文本</li>
+<li>Attr：属性</li>
+</ol>
+<ul>
+<li>
+<p>NodeList：节点列表集合</p>
+</li>
+<li>
+<p>NamedNodeMap：属性映射集合</p>
+</li>
+<li>
+<p>Document类型： 表示DOM树的最顶层节点，对应于HTML文档</p>
+</li>
+</ul>
+<ul>
+<li>属性：</li>
+</ul>
+<ol>
+<li>
+<pre><code>         childNodes：子节点列表
+</code></pre>
+</li>
+<li>
+<pre><code>          documentElement：获取文档的根元素
+</code></pre>
+</li>
+</ol>
+<ul>
+<li>方法：</li>
+</ul>
+<ol>
+<li>
+<pre><code>         createElement（元素名）：创建元素节点
+</code></pre>
+</li>
+<li>
+<pre><code>         createTextNode（文本内容）：创建文本节点
+</code></pre>
+</li>
+<li>
+<pre><code>      appendChild（子节点）：添加子节点，主要添加根元素
+</code></pre>
+</li>
+<li>
+<pre><code>  createNode（类型，名称）：根据条件创建一个新节点
+</code></pre>
+</li>
+</ol>
+<ul>
+<li>节点类型：1表示元素节点   2表示属性节点。 3表示文本节点</li>
+</ul>
+<h2 id="document的写操作">document的写操作：</h2>
+<ol>
+<li>创建新元素：var li=document.createElement(“li”);</li>
+<li>设置文本内容：var txt=document.createTextNode(“itany4”);         li.appendChild(txt);</li>
+<li>设置属性：li.setAttribute(“id’,”fourth”)</li>
+<li>找到父元素：var ul=document.getElementById(“myul”);</li>
+<li>追加：ul.appendChild(li);</li>
+</ol>
+<ul>
+<li>getElementById()只有document对象有，getElementsByTagName其他的dom对象也有。</li>
+</ul>
+<h2 id="element类型">Element类型；</h2>
+<ul>
+<li>属性：</li>
+</ul>
+<ol>
+<li>nodeName：元素名</li>
+<li>attributes：返回属性集合，NamedNodeMap类型</li>
+<li>childNodes：返回子节点集合，NodeList类型</li>
+<li>firstChild/lastChild：第一个/最后一个子节点</li>
+<li>parentNode：返回元素的父节点</li>
+</ol>
+<ul>
+<li>方法：</li>
+</ul>
+<ol>
+<li>appendChild（）：添加子节点，包括子元素，文本节点等。</li>
+<li>getAttribute（）：获取指定属性的值</li>
+<li>setAttribute（）：添加/修改属性</li>
+</ol>
+<ul>
+<li>element 的插入，删除，替换，克隆。</li>
+</ul>
+<ol>
+<li>克隆：node.cloneNode(ture|false) 是否包括内容</li>
+<li>插入：parent.insertBefore(新的节点，已经存在的节点）</li>
+<li>删除：parent.removeChild(要删除的节点）</li>
+<li>替换：parent.replaceChild(新的节点，被替换的节点）</li>
+</ol>
+<ul>
+<li>
+<p>JavaScript访问CSS</p>
+</li>
+<li>
+<p>mydiv.style.color=“”;</p>
+</li>
+<li>
+<p>获得焦点： onFocus</p>
+</li>
+<li>
+<p>失去焦点：onblur</p>
+</li>
+<li>
+<p>类选择器className</p>
+</li>
+</ul>
+]]></description>
+                    
+                        
+                    
+                    
+                        
+                            
+                                
+                                    
+                                    
+                                    
+                                        <category domain="https://jannyluo.github.io/categories/notes/">notes</category>
+                                    
+                                
+                            
+                        
+                            
+                        
+                    
+                </item>
+            
+        
+            
+                <item>
+                    <title>小程序中父子组件之间传值</title>
+                    <link>https://jannyluo.github.io/post/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E4%B8%AD%E7%88%B6%E5%AD%90%E7%BB%84%E4%BB%B6%E4%B9%8B%E9%97%B4%E4%BC%A0%E5%80%BC/</link>
+                    <guid isPermaLink="true">https://jannyluo.github.io/post/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E4%B8%AD%E7%88%B6%E5%AD%90%E7%BB%84%E4%BB%B6%E4%B9%8B%E9%97%B4%E4%BC%A0%E5%80%BC/</guid>
+                    <pubDate>Thu, 18 Jun 2020 22:13:32 +0800</pubDate>
+                    <description><![CDATA[<h1 id="子组件向父组件传值">子组件向父组件传值</h1>
+<p>子组件通过自定义参数传递，父组件在properties中接收</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">properties：{
+        Tabs(属性名):{
+                                   Type:Array;   (数据类型）
+                                    Value:[ ]         
+            }
+}
+</code></pre></div><p>properties中的值和data中的值一样，可以直接使用</p>
+<ul>
+<li>父组件向子组件传值
+<code>This.triggerEvent(“方法”,参数）</code></li>
+</ul>
+]]></description>
+                    
+                        
+                    
+                    
+                        
+                            
+                                
+                                    
+                                    
+                                    
+                                        <category domain="https://jannyluo.github.io/categories/mini/">mini</category>
+                                    
+                                
+                            
+                        
+                            
+                        
+                    
+                </item>
+            
+        
+            
+                <item>
+                    <title>小程序的缓存</title>
+                    <link>https://jannyluo.github.io/post/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E7%9A%84%E7%BC%93%E5%AD%98/</link>
+                    <guid isPermaLink="true">https://jannyluo.github.io/post/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E7%9A%84%E7%BC%93%E5%AD%98/</guid>
+                    <pubDate>Thu, 18 Jun 2020 22:12:25 +0800</pubDate>
+                    <description><![CDATA[<ol>
+<li>判断本地存储中有没有旧的数据。{time:Date.now(),data:[. ]}</li>
+<li>没有旧的数据则重新发送请求</li>
+<li>有旧的数据同时旧的数据没有过期则使用本地存储</li>
+</ol>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">const Cates=wx.getStorageSync(“cates”)
+If(!Cates){
+this.getCates()
+}else{
+            If(Date.now()-Cates.time)&gt;1000*10){
+                                this.getCates()
+                }else{
+                            this.Cates=Cates.data
+                            let leftMenuList=this.Cates.map(v=&gt;v.cat_name)
+                            let rightContent=this.Cates[0].children
+                            this.setData({
+                                leftMenuList
+                                rightContent
+                            })
+                        }
+}
+</code></pre></div>]]></description>
+                    
+                        
+                    
+                    
+                        
+                            
+                                
+                                    
+                                    
+                                    
+                                        <category domain="https://jannyluo.github.io/categories/mini/">mini</category>
+                                    
+                                
+                            
+                        
+                            
+                        
+                    
+                </item>
+            
+        
+            
+                <item>
+                    <title>Node.js中的模板引擎</title>
+                    <link>https://jannyluo.github.io/post/node.js%E4%B8%AD%E7%9A%84%E6%A8%A1%E6%9D%BF%E5%BC%95%E6%93%8E/</link>
+                    <guid isPermaLink="true">https://jannyluo.github.io/post/node.js%E4%B8%AD%E7%9A%84%E6%A8%A1%E6%9D%BF%E5%BC%95%E6%93%8E/</guid>
+                    <pubDate>Thu, 18 Jun 2020 22:11:07 +0800</pubDate>
+                    <description><![CDATA[<ol>
+<li>安装
+<code>npm install art-template</code></li>
+<li>使用</li>
+</ol>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">Var template=require(‘art-template’)
+ Var fs=reqiure(‘fs’)
+Fs.readfile(‘./tpl.html’,function(err,data){
+If(err){
+
+}
+Var ret=template.render(data.toString(),{
+Name:’jack’,
+Age:’18’,
+Province:’Beijing’,
+Hobbies:[
+‘写代码’，
+’唱歌’，
+‘打游戏’]
+
+})
+</code></pre></div><p>Tpl.html的内容：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">大家好，我叫:{{ name }}
+我今年：{{ age }}
+我来自： {{ province }}
+我喜欢： {{ each hobbies }} {{ $value }} {{/each}}
+</code></pre></div><ul>
+<li>模板引擎不关心内容，只关心{{  }}</li>
+</ul>
+]]></description>
+                    
+                        
+                    
+                    
+                        
+                            
+                                
+                                    
+                                    
+                                    
+                                        <category domain="https://jannyluo.github.io/categories/node.js/">node.js</category>
+                                    
+                                
+                            
+                        
+                            
+                        
+                    
+                </item>
+            
+        
+            
+                <item>
+                    <title>Node.js中的目录渲染</title>
+                    <link>https://jannyluo.github.io/post/node.js%E4%B8%AD%E7%9A%84%E7%9B%AE%E5%BD%95%E6%B8%B2%E6%9F%93/</link>
+                    <guid isPermaLink="true">https://jannyluo.github.io/post/node.js%E4%B8%AD%E7%9A%84%E7%9B%AE%E5%BD%95%E6%B8%B2%E6%9F%93/</guid>
+                    <pubDate>Thu, 18 Jun 2020 22:10:20 +0800</pubDate>
+                    <description><![CDATA[<ol>
+<li>在模板template.html中需要替换的位置预留一个特殊的标记</li>
+<li>根据files生成需要的html内容</li>
+</ol>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">server.on(‘request’,function(req,res){
+Fs.readfile(‘/‘.function(err,data){
+If(err){
+Return res.end(‘404 not found’)
+}
+Res.end(data)
+}
+fs.readdir(‘/‘,function(err, files){
+If(err){}
+Var content=` `
+Files.forEach(function(item){
+content+=`&lt;tr&gt;//${item}/&lt;/tr&gt;
+}
+data=data.toString()
+data=data.replace(data&amp;,content)
+Res.end(data)
+}
+})
+</code></pre></div><ul>
+<li>${}可以用来引用变量</li>
+</ul>
+]]></description>
+                    
+                        
+                    
+                    
+                        
+                            
+                                
+                                    
+                                    
+                                    
+                                        <category domain="https://jannyluo.github.io/categories/node.js/">node.js</category>
+                                    
+                                
+                            
+                        
+                            
+                        
+                    
+                </item>
+            
+        
+            
+                <item>
+                    <title>Node.js中的编码问题</title>
+                    <link>https://jannyluo.github.io/post/node.js%E4%B8%AD%E7%9A%84%E7%BC%96%E7%A0%81%E9%97%AE%E9%A2%98/</link>
+                    <guid isPermaLink="true">https://jannyluo.github.io/post/node.js%E4%B8%AD%E7%9A%84%E7%BC%96%E7%A0%81%E9%97%AE%E9%A2%98/</guid>
+                    <pubDate>Thu, 18 Jun 2020 22:08:44 +0800</pubDate>
+                    <description><![CDATA[<h2 id="nodejs中的编码问题">node.js中的编码问题</h2>
+<ul>
+<li>在服务器默认发送的数据，其实是utf8编码的内容</li>
+<li>但浏览器不知道你是utf8编码的内容</li>
+<li>浏览器在不知道服务器响应内容的编码的情况下会按照当前操作系统的默认编码去解析</li>
+<li>中文操作系统默认是gbk</li>
+<li>解决方法就是正确的告诉浏览器我发送给你的内容是什么编码的</li>
+<li>在http协议中，Content-Type就是用来告知对方数据的类型</li>
+<li>Text/plain是普通文本</li>
+<li>text/html是html代码</li>
+<li>image/jpeg</li>
+</ul>
+<ul>
+<li>如果要引用其他文件的html代码就用fs.readFile</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">res.setHeader(&#39;Content-Type&#39;,&#39;text/plain;charset=utf-8&#39;)
+res.end(&#39;你好哈哈哈哈’)
+
+else if(req.url===&#39;/login&#39;){
+    res.setHeader(&#39;Content-Type&#39;,&#39;text/html;charset=utf-8&#39;)
+    res.end(
+        &#39;&lt;a href&gt;百度&lt;/a&gt;&#39;
+    )
+}
+</code></pre></div><p>当采用无分号的代码风格时，需要注意</p>
+<ul>
+<li>当一行代码是以：（    [   `   开头的时候要加分号</li>
+</ul>
+]]></description>
+                    
+                        
+                    
+                    
+                        
+                            
+                                
+                                    
+                                    
+                                    
+                                        <category domain="https://jannyluo.github.io/categories/node.js/">node.js</category>
+                                    
+                                
+                            
+                        
+                            
+                        
+                    
+                </item>
+            
+        
+            
+                <item>
+                    <title>Node.js中获取IP地址和端口号</title>
+                    <link>https://jannyluo.github.io/post/node.js%E4%B8%AD%E8%8E%B7%E5%8F%96ip%E5%9C%B0%E5%9D%80%E5%92%8C%E7%AB%AF%E5%8F%A3%E5%8F%B7/</link>
+                    <guid isPermaLink="true">https://jannyluo.github.io/post/node.js%E4%B8%AD%E8%8E%B7%E5%8F%96ip%E5%9C%B0%E5%9D%80%E5%92%8C%E7%AB%AF%E5%8F%A3%E5%8F%B7/</guid>
+                    <pubDate>Thu, 18 Jun 2020 22:07:28 +0800</pubDate>
+                    <description><![CDATA[<ul>
+<li>IP地址用来定位计算机，</li>
+<li>端口号用来定位具体的应用程序</li>
+<li>所有需要联网的软件都需要有端口号</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">server.on(&#39;request&#39;,function (request,response) {
+    console.log(&#39;请求的路径是：&#39;+request.socket.remoteAddress)
+</code></pre></div><ul>
+<li>
+<p>端口号是: request.socket.remotePort</p>
+</li>
+<li>
+<p>端口号的范围：0—65536</p>
+</li>
+<li>
+<p>在计算机中有一些默认你的端口号，不要去使用:例如http服务的80</p>
+</li>
+</ul>
+]]></description>
+                    
+                        
+                    
+                    
+                        
+                            
+                                
+                                    
+                                    
+                                    
+                                        <category domain="https://jannyluo.github.io/categories/node.js/">node.js</category>
+                                    
+                                
+                            
+                        
+                            
+                        
+                    
+                </item>
+            
+        
+            
+                <item>
+                    <title>Node.js中简单的模块化</title>
+                    <link>https://jannyluo.github.io/post/node.js%E4%B8%AD%E7%AE%80%E5%8D%95%E7%9A%84%E6%A8%A1%E5%9D%97%E5%8C%96/</link>
+                    <guid isPermaLink="true">https://jannyluo.github.io/post/node.js%E4%B8%AD%E7%AE%80%E5%8D%95%E7%9A%84%E6%A8%A1%E5%9D%97%E5%8C%96/</guid>
+                    <pubDate>Thu, 18 Jun 2020 22:05:34 +0800</pubDate>
+                    <description><![CDATA[<ol>
+<li>用require来引用别的文件</li>
+</ol>
+<p>require（’./b.js’）//可以省略后缀名js
+2. node中没有全局作用域，只有模块作用域//外部不能访问内部，内部不能访问外部！//文件作用域
+3. require方法有两个作用：</p>
+<ul>
+<li>
+<ol>
+<li>加载文件并执行里面的代码</li>
+</ol>
+</li>
+<li>
+<ol start="2">
+<li>拿到被加载文件模块导出的接口对象</li>
+</ol>
+</li>
+</ul>
+<ul>
+<li>每一个文件模块中都提供了一个对象：exports</li>
+<li>exports默认是一个空对象</li>
+<li>你要做的就是把所有需要被外部访问的成员挂载到exports对象中。
+a.js</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">var bExport=require(&#39;./demo例子&#39;)
+
+console.log(bExport.add(2,3))
+
+
+b.js
+exports.add=function(a,b) {
+    return a*b;
+
+}
+</code></pre></div>]]></description>
+                    
+                        
+                    
+                    
+                        
+                            
+                                
+                                    
+                                    
+                                    
+                                        <category domain="https://jannyluo.github.io/categories/node.js/">node.js</category>
+                                    
+                                
+                            
+                        
+                            
+                        
+                    
+                </item>
+            
+        
+            
+                <item>
+                    <title>Node.js中的读写文件</title>
+                    <link>https://jannyluo.github.io/post/node-js%E4%B8%AD%E7%9A%84%E8%AF%BB%E5%86%99%E6%96%87%E4%BB%B6/</link>
+                    <guid isPermaLink="true">https://jannyluo.github.io/post/node-js%E4%B8%AD%E7%9A%84%E8%AF%BB%E5%86%99%E6%96%87%E4%BB%B6/</guid>
+                    <pubDate>Thu, 18 Jun 2020 22:03:56 +0800</pubDate>
+                    <description><![CDATA[<ol>
+<li>node中的js具有文件操作的能力</li>
+</ol>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">var fs=require（’fs’）//使用require方法加载fs核心模块
+fs.readFile(‘./demo.txt’,function(error,data){
+console.log()
+}
+</code></pre></div><ul>
+<li>有两个参数，第一个是文件路径，第二个是一个回调函数。</li>
+<li>function的两个参数：</li>
+<li>成功    data--数据
+error--null</li>
+<li>失败     data—null
+error--错误对象</li>
+</ul>
+<ol start="2">
+<li>node写入文件</li>
+</ol>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">var fs=require（’fs’）
+fs.writeFile(‘./demo1.txt’,’hellohowareyou’,’function(error){
+If(error)
+{
+console.log(‘fail&#39;)
+}
+Else(){console.log(’SUCCESS!’)}
+</code></pre></div><ul>
+<li>
+<p>有三个参数：路径，内容，回调函数</p>
+</li>
+<li>
+<p>成功：   error是null</p>
+</li>
+<li>
+<p>失败：   error是错误对象</p>
+</li>
+<li>
+<p>Node为js提供了很多服务器级别的API，这些API绝大多数都被包装到了一个具名 的核心模块中，例如文件操作的fs模块，http服务器构建的http模块，path路径操作模块，os操作信息模块。</p>
+</li>
+</ul>
+]]></description>
+                    
+                        
+                    
+                    
+                        
+                            
+                                
+                                    
+                                    
+                                    
+                                        <category domain="https://jannyluo.github.io/categories/node.js/">node.js</category>
+                                    
+                                
+                            
+                        
+                            
+                        
+                    
+                </item>
+            
+        
+            
+                <item>
+                    <title>Node.js中的http服务</title>
+                    <link>https://jannyluo.github.io/post/node.js%E4%B8%AD%E7%9A%84http%E6%9C%8D%E5%8A%A1/</link>
+                    <guid isPermaLink="true">https://jannyluo.github.io/post/node.js%E4%B8%AD%E7%9A%84http%E6%9C%8D%E5%8A%A1/</guid>
+                    <pubDate>Thu, 18 Jun 2020 22:01:31 +0800</pubDate>
+                    <description><![CDATA[<p>构建一个web服务器</p>
+<p>在node中提供了一个核心模块：http（创建编写服务器）</p>
+<ol>
+<li>加载http核心模块
+<code>var http=require（’http’）</code></li>
+<li>创建一个web服务器，返回一个server实例
+<code>var server=http.createServer( )</code></li>
+<li>服务器要干嘛</li>
+</ol>
+<ul>
+<li>提供服务</li>
+<li>发请求</li>
+<li>接受请求</li>
+<li>处理请求</li>
+<li>给个反馈（发送响应）</li>
+<li>注册request请求事件</li>
+<li>当客户端请求过来，就会自动触发服务器的request请求事件，然后执行第二个参数（回调函数）
+<code>server.on(‘request’, function(request, response){}）</code></li>
+<li>response可以向客户端响应内容
+<code>reponse.write('')</code></li>
+<li>结尾一定要加 reponse.end( ) 否则无法响应！！！！！
+<code>response.end()</code></li>
+</ul>
+<p>上面这种方式几乎不用，要用到</p>
+<ul>
+<li>response.end('')
+4.绑定端口号，启动服务器
+<code>server.listen(3000,function(){})</code></li>
+</ul>
+]]></description>
+                    
+                        
+                    
+                    
+                        
+                            
+                                
+                                    
+                                    
+                                    
+                                        <category domain="https://jannyluo.github.io/categories/node.js/">node.js</category>
+                                    
+                                
+                            
+                        
+                            
+                        
+                    
+                </item>
+            
+        
+            
+                <item>
+                    <title>小程序中组件</title>
+                    <link>https://jannyluo.github.io/post/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E4%B8%AD%E7%BB%84%E4%BB%B6/</link>
+                    <guid isPermaLink="true">https://jannyluo.github.io/post/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E4%B8%AD%E7%BB%84%E4%BB%B6/</guid>
+                    <pubDate>Thu, 18 Jun 2020 21:58:54 +0800</pubDate>
+                    <description><![CDATA[<h2 id="swiper轮播图组件">swiper轮播图组件</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">&lt;swiper&gt;
+            &lt;swiper-item&gt;&lt;image src=‘’/&gt;&lt;/swiper-item&gt;
+&lt;/swiper&gt;
+</code></pre></div><p>默认高度：150px，image也存在默认的高度</p>
+<p>swiper 高度=swiper宽度 * 原图的高度 / 原图的宽度</p>
+<ul>
+<li>swiper的height： 100vw * 原图的高度 / 原图的宽度</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">swiper{
+                Width:100%
+                Height:calc(100vw * 原图的高度 / 原图的宽度)
+}
+Image{
+            Width:100%
+}
+</code></pre></div><p>轮播图属性：</p>
+<ul>
+<li>autoplay</li>
+<li>interval（修改轮播时间）</li>
+<li>circular（与interval配合）</li>
+<li>indicator-dots（面板知识点）</li>
+<li>indicator-color（未选中的颜色）</li>
+<li>indicator-active-color（选中的颜色）</li>
+</ul>
+<p>##Navigator导航
+属性：</p>
+<ol>
+<li>url指定页面路径，不加后缀名</li>
+<li>open-type 跳转的方式：</li>
+</ol>
+<ul>
+<li>默认值 ：navigate（不能跳到tabbar的页面）</li>
+<li>redirect （跳转不保留原来的页面，没有返回按钮）</li>
+<li>switchTab（跳转到tabbar页面，并且关闭所有其他非tabbar的页面）</li>
+<li>reLaunch （关闭所有页面，随便跳转到哪个页面）</li>
+</ul>
+]]></description>
+                    
+                        
+                    
+                    
+                        
+                            
+                                
+                                    
+                                    
+                                    
+                                        <category domain="https://jannyluo.github.io/categories/mini/">mini</category>
+                                    
+                                
+                            
+                        
+                            
+                        
+                    
+                </item>
+            
+        
+            
+                <item>
+                    <title>小程序中的标签使用</title>
+                    <link>https://jannyluo.github.io/post/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E4%B8%AD%E7%9A%84%E6%A0%87%E7%AD%BE%E4%BD%BF%E7%94%A8/</link>
+                    <guid isPermaLink="true">https://jannyluo.github.io/post/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E4%B8%AD%E7%9A%84%E6%A0%87%E7%AD%BE%E4%BD%BF%E7%94%A8/</guid>
+                    <pubDate>Thu, 18 Jun 2020 21:52:18 +0800</pubDate>
+                    <description><![CDATA[<h2 id="小程序中的标签">#小程序中的标签</h2>
+<p><strong>text标签（相当于span标签）：</strong></p>
+<ol>
+<li>文本标签</li>
+<li>只能嵌套text</li>
+<li>长按文字可以复制的属性：selectable</li>
+<li>是否解码：decode</li>
+</ol>
+<hr>
+<p><strong>block标签不显示</strong></p>
+<hr>
+<p><strong>View标签相当于div</strong></p>
+<hr>
+<p><strong>image图片标签：</strong></p>
+<ol>
+<li>Src指定加载图片的路径（用网络图片）</li>
+<li>mode决定图片宽高适配：</li>
+</ol>
+<ul>
+<li>默认值：scaleToFill（不做纵横比例）</li>
+<li>aspectFit（保持宽高比，保证图片的长边能够完全显示）</li>
+<li>aspectFill（保持宽高比，保证图片的短边能够完全显示，少用）</li>
+<li>widthFix（宽度指定之后，高度会按比例自己调整，常用）</li>
+</ul>
+<ol start="3">
+<li>小程序中的图片是直接支持懒加载的 lazy-load</li>
+</ol>
+<hr>
+<p><strong>rich-text富文本标签</strong>
+node属性：</p>
+<ul>
+<li>接收标签字符串<code>&lt;rich-text node=“{{html}}&quot;&gt;</code></li>
+<li>接收对象数组</li>
+</ul>
+<hr>
+<p><strong>button标签</strong>
+属性：</p>
+<ul>
+<li>size（default、mini）</li>
+<li>type控制按钮颜色 （default：灰色、primary：绿色、warn：红色）</li>
+<li>plain按钮是否镂空，背景色透明</li>
+<li>loading 是否加入等待图标
+开放能力：</li>
+<li>open-type属性</li>
+<li>contact：打开客服对话</li>
+<li>share：转发（不能把小程序分享到朋友圈）</li>
+<li>getPhoneNumber：获取手机号码信息：绑定一个事件bindgetphonenumber、在实践的回调函数中通过参数获取信息func（e）{}</li>
+<li>getUserInfo：获取个人信息: bindgetuserinfo事件</li>
+<li>launchApp：在小程序中直接打开app</li>
+<li>openSetting：打开小程序内置的授权页面</li>
+<li>feedback：打开小程序内置的意见反馈页面</li>
+</ul>
+<hr>
+<p><strong>icon标签：</strong></p>
+<ul>
+<li>type属性：类型</li>
+<li>size属性</li>
+<li>color属性</li>
+</ul>
+<hr>
+<p><strong>radio单选框</strong>
+<code>&lt;radio-group bindchange=‘'&gt; &lt;radio value=''&gt;&lt;/radio&gt;</code></p>
+]]></description>
+                    
+                        
+                    
+                    
+                        
+                            
+                                
+                                    
+                                    
+                                    
+                                        <category domain="https://jannyluo.github.io/categories/mini/">mini</category>
+                                    
+                                
+                            
+                        
+                            
+                        
+                    
+                </item>
+            
         
             
                 <item>
@@ -70,7 +1163,7 @@
                                     
                                     
                                     
-                                        <category domain="https://jannyluo.github.io/categories/notes/">notes</category>
+                                        <category domain="https://jannyluo.github.io/categories/mini/">mini</category>
                                     
                                 
                             
@@ -91,33 +1184,49 @@
 <img src="https://img-blog.csdnimg.cn/20200609201501308.png" alt="截图">
 <em>webpack version：4.43.0</em></p>
 <p>由于在webpack中默认只能处理部分ES6的语法，要借助第三方loader来帮助webpack将高级的语法转换成低级的语法</p>
-<p>首先要安装的三个：**<strong>babel-loader、babel-core、babel-preset-env</strong>
-1）安装babel-loader（<em>不要把babel打成bable！！！！！！</em>）</p>
+<p>首先要安装的三个：<strong>babel-loader、babel-core、babel-preset-env</strong></p>
+<ol>
+<li>安装babel-loader（<em>不要把babel打成bable！！！！！！</em>）</li>
+</ol>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"> npm i babel-loader -D  
-</code></pre></div><p>2）安装babel-core</p>
+</code></pre></div><ol start="2">
+<li>安装babel-core</li>
+</ol>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">npm install -D babel-core
-</code></pre></div><p>3）安装babel-preset-env</p>
+</code></pre></div><ol start="3">
+<li>安装babel-preset-env</li>
+</ol>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">npm install -D babel-preset-env
-</code></pre></div><p>4）这三个包安装好之后在项目的根目录创建一个./babelrc文件，
-./babelrc的配置：</p>
+</code></pre></div><ol start="4">
+<li>这三个包安装好之后在项目的根目录创建一个./babelrc文件，
+./babelrc的配置：</li>
+</ol>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#f92672">{</span>
   <span style="color:#e6db74">&#34;presets&#34;</span>: <span style="color:#f92672">[</span><span style="color:#e6db74">&#34;env&#34;</span><span style="color:#f92672">]</span>
 <span style="color:#f92672">}</span>
-</code></pre></div><p>5）在webpack.config.js中的module对象的rules属性添加一项：</p>
+</code></pre></div><ol start="5">
+<li>在webpack.config.js中的module对象的rules属性添加一项：</li>
+</ol>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"> <span style="color:#f92672">{</span>test:/<span style="color:#ae81ff">\.</span>js$/,use:<span style="color:#e6db74">&#39;babel-loader&#39;</span>,exclude:<span style="color:#e6db74">&#39;/node_modules/&#39;</span><span style="color:#f92672">}</span>
-</code></pre></div><p>6）保存运行截图
+</code></pre></div><ol start="6">
+<li>保存运行截图
 <img src="https://img-blog.csdnimg.cn/20200609211225998.png" alt="截图">
-提示还需要两个插件才能正常的运行
-7）安装需要的两个插件</p>
+提示还需要两个插件才能正常的运行</li>
+<li>安装需要的两个插件</li>
+</ol>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">npm i @babel/plugin-proposal-class-properties
 npm i @babel/plugin-syntax-class-properties
-</code></pre></div><p>8）安装完毕之后在./babelrc中添加配置</p>
+</code></pre></div><ol start="8">
+<li>安装完毕之后在./babelrc中添加配置</li>
+</ol>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#f92672">{</span>
   <span style="color:#e6db74">&#34;presets&#34;</span>: <span style="color:#f92672">[</span><span style="color:#e6db74">&#34;env&#34;</span><span style="color:#f92672">]</span>,
   <span style="color:#e6db74">&#34;plugins&#34;</span>: <span style="color:#f92672">[</span><span style="color:#e6db74">&#34;@babel/plugin-proposal-class-properties&#34;</span>,<span style="color:#e6db74">&#34;@babel/plugin-syntax-class-properties&#34;</span><span style="color:#f92672">]</span>
   <span style="color:#f92672">}</span>
-</code></pre></div><p>9）保存重新运行之后可以成功打包。
-<img src="https://img-blog.csdnimg.cn/20200609211550368.png" alt="截图"></p>
+</code></pre></div><ol start="9">
+<li>保存重新运行之后可以成功打包。
+<img src="https://img-blog.csdnimg.cn/20200609211550368.png" alt="截图"></li>
+</ol>
 ]]></description>
                     
                         

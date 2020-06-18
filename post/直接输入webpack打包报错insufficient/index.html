@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8">
+
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <meta name="generator" content="Hugo 0.72.0" />
+
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <meta name="format-detection" content="telephone=no, date=no, address=no, email=no" />
+    
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+<link rel="stylesheet" href="/css/remixicon/remixicon.css"><link rel="stylesheet" href="/css/tony.min.2cd909c3b2b4f0eb1f6b8dbe02a8be4ed8a7456895a39f284818ed1e771073c6.css" integrity="sha256-LNkJw7K08Osfa42+Aqi+TtinRWiVo58oSBjtHncQc8Y="/>
+
+    <link rel="shortcut icon" href="http://img1.imgtn.bdimg.com/it/u=2050718074,2296818643&amp;fm=26&amp;gp=0.jpg" type="image/x-icon" />
+    <title>直接输入webpack打包报错Insufficient number of arguments or no entry found. </title>
+
+    <meta name="author" content="This is Janny" /><meta name="description" content="" />
+
+    
+    <link rel="canonical" href="https://jannyluo.github.io/post/%E7%9B%B4%E6%8E%A5%E8%BE%93%E5%85%A5webpack%E6%89%93%E5%8C%85%E6%8A%A5%E9%94%99insufficient/" />
+
+</head>
+
+    <header id="header-div" class="tony-header-fixed">
+
+    <div class="header-div1">
+        <a href="https://jannyluo.github.io" style="display:inline-block;">
+            <img src="http://img1.imgtn.bdimg.com/it/u=2050718074,2296818643&amp;fm=26&amp;gp=0.jpg">
+        </a>
+    </div>
+    <div class="header-div2">
+    <a href="/"><button class="btn btn-light">Home</button></a>
+    <a href="/about/"><button class="btn btn-light">About</button></a>
+    
+</div>
+</header>
+    <body>
+        
+    <div id="post-container">
+    <div class="grid grid-centered">
+        <div id="grid-cell" class="grid-cell">
+            
+                <div class="single-left">
+                    
+    
+        
+        
+        
+        
+        
+            
+            
+            
+            <div class="index-div">
+                <div class="single-index">
+                    <h4>
+                        <i class="ri-list-check-2"></i>
+                        TOC
+                    </h4>
+                </div>  
+                <ul id="article-index" class="index-ul">
+                    
+                        
+                        
+                            
+                                
+                                
+                                <a href="#%e9%97%ae%e9%a2%98">
+                                    <li style="padding-left:23px" class="">
+                                        <i class="ri-checkbox-blank-circle-line"></i>
+                                        &nbsp;&nbsp;问题：
+                                    </li>
+                                </a>
+                            
+                        
+                    
+                        
+                        
+                            
+                                
+                                
+                                <a href="#%e8%a7%a3%e5%86%b3%e6%96%b9%e6%b3%95">
+                                    <li style="padding-left:23px" class="">
+                                        <i class="ri-checkbox-blank-circle-line"></i>
+                                        &nbsp;&nbsp;解决方法：
+                                    </li>
+                                </a>
+                            
+                        
+                    
+                </ul>
+            </div>
+        
+                    
+
+
+
+
+    
+        <div>
+            <div class="index-div-prev">
+                <h4>Newer</h4>
+                <p>
+                    <a href="/post/webpack%E6%89%93%E5%8C%85%E6%8A%A5%E9%94%99module/" rel="next">Webpack打包报错module not found</a>
+                </p>
+            </div>
+        </div>
+    
+    
+        <div>
+            <div class="index-div-next">
+                <h4>Older</h4>
+                <p>
+                    <a href="/post/js%E5%B0%8F%E5%9F%BA%E7%A1%80/" rel="prev">Js小基础</a>
+                </p>
+            </div>
+        </div>
+    
+
+                </div>
+            
+            
+                <div id="reading-bar"></div>
+            
+            <article class="article reveal">
+                <div id="load">
+                    <div class="article-header">
+                        
+    
+        <span class="badge badge-pill badge-danger single-badge">
+            <a href="https://jannyluo.github.io/categories/problem" class="post-header">problem</a>
+        </span>
+    
+
+<span title="预计阅读时长" class="badge badge-pill badge-danger single-badge post-header">
+    1 mins
+</span>
+<h2 class="single-h2">直接输入webpack打包报错Insufficient number of arguments or no entry found. </h2>
+<div class="article-list-footer">
+    <span class="article-list-date">18-06-20</span>
+    <span class="article-list-divider">/</span>
+    <span class="article-list-minutes">35 Words</span>
+</div>
+<div class="single-line"></div>
+                    </div>
+                    <div class="article-content">
+                        <ul>
+<li>webpack version：4.43.0*</li>
+</ul>
+<h2 id="问题">问题：</h2>
+<p>直接在项目下输入webpack打包报错</p>
+<p>Insufficient number of arguments or no entry found.</p>
+<p><img src="https://img-blog.csdnimg.cn/20200607222418402.png" alt="截图"></p>
+<h2 id="解决方法">解决方法：</h2>
+<ol>
+<li>首先在项目根目录下创建名为：webpack.config.js文件
+<img src="https://img-blog.csdnimg.cn/20200607222754493.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MzQxMDQ5MQ==,size_16,color_FFFFFF,t_70" alt="截图"></li>
+<li>在创建的webpack.config.js文件编辑如下代码
+注意：
+修改代码的入口/出口文件的路径和要输出的文件名称</li>
+</ol>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">path</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;path&#39;</span>)
+
+<span style="color:#a6e22e">module</span>.<span style="color:#a6e22e">exports</span> <span style="color:#f92672">=</span> {
+    <span style="color:#75715e">//指定入口，表示webpack要打包哪个文件
+</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">entry</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">path</span>.<span style="color:#a6e22e">join</span>(<span style="color:#a6e22e">__dirname</span>,<span style="color:#e6db74">&#39;./src/main.js&#39;</span>),
+    <span style="color:#75715e">//指定出口，表示打包好的文件输出到哪个目录
+</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">output</span><span style="color:#f92672">:</span>{
+        <span style="color:#a6e22e">path</span><span style="color:#f92672">:</span><span style="color:#a6e22e">path</span>.<span style="color:#a6e22e">join</span>(<span style="color:#a6e22e">__dirname</span>,<span style="color:#e6db74">&#39;./dist&#39;</span>),
+        <span style="color:#75715e">//指定输出文件的名称
+</span><span style="color:#75715e"></span>        <span style="color:#a6e22e">filename</span><span style="color:#f92672">:</span><span style="color:#e6db74">&#39;bundle1.js&#39;</span>
+    }
+}
+</code></pre></div><ul>
+<li>保存后重新在terminal输入webpack成功打包：*
+<img src="https://img-blog.csdnimg.cn/20200607223152799.png" alt="截图"></li>
+</ul>
+
+                    </div>
+                    
+                    
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+    <div>
+    <a href="" target="_blank" style="text-decoration:none">
+        <div class="goup-container footer-github">
+            <i class="ri-github-fill footer-github-icon"></i>
+        </div>
+    </a>
+    <div class="footer reveal">
+        
+            <p>
+                Copyright&nbsp;<i class="ri-copyright-line"></i>&nbsp;·&nbsp;2020&nbsp;·&nbsp;This is Janny&nbsp;·&nbsp;
+                <a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" style="text-decoration: none;color: inherit;font-size: 14px;font-weight: 500;">
+                    CC BY-NC 4.0
+                </a>
+            </p>
+        
+        <p>
+            
+                Powered by <a href="https://github.com/gohugoio/hugo">Hugo</a> | Theme is <a href="https://github.com/ThemeTony/hugo-theme-tony">Tony</a>
+            
+        </p>
+    </div>
+</div>
+
+
+    <script src="/js/jquery.min.js"></script><script src="/js/tony.min.21fb28b08edccb7a220a2a53f8fa67ba2f62588d04437e5a3998769b79537006.js" integrity="sha256-IfsosI7cy3oiCipT+Ppnui9iWI0EQ35aOZh2m3lTcAY="></script><script src="/js/medium-zoom.min.js"></script>
+<script>
+	mediumZoom(document.querySelectorAll('div.article-content img'), {
+        background: '#fff'
+    });
+</script>
+
+
+    
+<script>
+(function(){
+	var bp = document.createElement('script');
+	var curProtocol = window.location.protocol.split(':')[0];
+	if (curProtocol === 'https'){
+	 bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+	}
+	else{
+	bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+	}
+	var s = document.getElementsByTagName("script")[0];
+	s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+
+</html>

@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8">
+
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <meta name="generator" content="Hugo 0.72.0" />
+
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <meta name="format-detection" content="telephone=no, date=no, address=no, email=no" />
+    
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+<link rel="stylesheet" href="/css/remixicon/remixicon.css"><link rel="stylesheet" href="/css/tony.min.2cd909c3b2b4f0eb1f6b8dbe02a8be4ed8a7456895a39f284818ed1e771073c6.css" integrity="sha256-LNkJw7K08Osfa42+Aqi+TtinRWiVo58oSBjtHncQc8Y="/>
+
+    <link rel="shortcut icon" href="http://img1.imgtn.bdimg.com/it/u=2050718074,2296818643&amp;fm=26&amp;gp=0.jpg" type="image/x-icon" />
+    <title>Js小基础</title>
+
+    <meta name="author" content="This is Janny" /><meta name="description" content="" />
+
+    
+    <link rel="canonical" href="https://jannyluo.github.io/post/js%E5%B0%8F%E5%9F%BA%E7%A1%80/" />
+
+</head>
+
+    <header id="header-div" class="tony-header-fixed">
+
+    <div class="header-div1">
+        <a href="https://jannyluo.github.io" style="display:inline-block;">
+            <img src="http://img1.imgtn.bdimg.com/it/u=2050718074,2296818643&amp;fm=26&amp;gp=0.jpg">
+        </a>
+    </div>
+    <div class="header-div2">
+    <a href="/"><button class="btn btn-light">Home</button></a>
+    <a href="/about/"><button class="btn btn-light">About</button></a>
+    
+</div>
+</header>
+    <body>
+        
+    <div id="post-container">
+    <div class="grid grid-centered">
+        <div id="grid-cell" class="grid-cell">
+            
+                <div class="single-left">
+                    
+    
+        
+        
+        
+        
+        
+            
+            
+            
+            <div class="index-div">
+                <div class="single-index">
+                    <h4>
+                        <i class="ri-list-check-2"></i>
+                        TOC
+                    </h4>
+                </div>  
+                <ul id="article-index" class="index-ul">
+                    
+                        
+                        
+                            
+                                
+                                
+                                <a href="#%e5%ad%97%e7%ac%a6%e4%b8%b2%e6%95%b0%e7%bb%84">
+                                    <li style="padding-left:23px" class="">
+                                        <i class="ri-checkbox-blank-circle-line"></i>
+                                        &nbsp;&nbsp;字符串数组：
+                                    </li>
+                                </a>
+                            
+                        
+                    
+                        
+                        
+                            
+                                
+                                
+                                <a href="#%e4%ba%8c%e7%bb%b4%e6%95%b0%e7%bb%84">
+                                    <li style="padding-left:23px" class="">
+                                        <i class="ri-checkbox-blank-circle-line"></i>
+                                        &nbsp;&nbsp;二维数组
+                                    </li>
+                                </a>
+                            
+                        
+                    
+                        
+                        
+                            
+                                
+                                
+                                <a href="#%e5%ae%9a%e4%b9%89%e5%87%bd%e6%95%b0-%e8%b0%83%e7%94%a8%e5%87%bd%e6%95%b0">
+                                    <li style="padding-left:23px" class="">
+                                        <i class="ri-checkbox-blank-circle-line"></i>
+                                        &nbsp;&nbsp;定义函数 调用函数
+                                    </li>
+                                </a>
+                            
+                        
+                    
+                        
+                        
+                            
+                                
+                                
+                                <a href="#%e5%8c%bf%e5%90%8d%e5%87%bd%e6%95%b0">
+                                    <li style="padding-left:23px" class="">
+                                        <i class="ri-checkbox-blank-circle-line"></i>
+                                        &nbsp;&nbsp;匿名函数：
+                                    </li>
+                                </a>
+                            
+                        
+                    
+                        
+                        
+                            
+                                
+                                
+                                <a href="#javascript%e7%9a%84%e7%bb%84%e6%88%90-ecmascript-dom-bom">
+                                    <li style="padding-left:23px" class="">
+                                        <i class="ri-checkbox-blank-circle-line"></i>
+                                        &nbsp;&nbsp;javascript的组成： ECMAScript， DOM， BOM。
+                                    </li>
+                                </a>
+                            
+                        
+                    
+                        
+                        
+                            
+                                
+                                
+                                <a href="#window%e5%af%b9%e8%b1%a1">
+                                    <li style="padding-left:23px" class="">
+                                        <i class="ri-checkbox-blank-circle-line"></i>
+                                        &nbsp;&nbsp;window对象：
+                                    </li>
+                                </a>
+                            
+                        
+                    
+                        
+                        
+                            
+                                
+                                
+                                <a href="#%e5%b8%b8%e7%94%a8%e4%ba%8b%e4%bb%b6">
+                                    <li style="padding-left:23px" class="">
+                                        <i class="ri-checkbox-blank-circle-line"></i>
+                                        &nbsp;&nbsp;常用事件
+                                    </li>
+                                </a>
+                            
+                        
+                    
+                        
+                        
+                            
+                                
+                                
+                                <a href="#history%e5%af%b9%e8%b1%a1%e8%a1%a8%e7%a4%ba%e5%8e%86%e5%8f%b2">
+                                    <li style="padding-left:23px" class="">
+                                        <i class="ri-checkbox-blank-circle-line"></i>
+                                        &nbsp;&nbsp;history对象：表示历史
+                                    </li>
+                                </a>
+                            
+                        
+                    
+                        
+                        
+                            
+                                
+                                
+                                <a href="#location%e5%af%b9%e8%b1%a1">
+                                    <li style="padding-left:23px" class="">
+                                        <i class="ri-checkbox-blank-circle-line"></i>
+                                        &nbsp;&nbsp;location对象：
+                                    </li>
+                                </a>
+                            
+                        
+                    
+                        
+                        
+                            
+                                
+                                
+                                <a href="#document%e5%af%b9%e8%b1%a1">
+                                    <li style="padding-left:23px" class="">
+                                        <i class="ri-checkbox-blank-circle-line"></i>
+                                        &nbsp;&nbsp;document对象：
+                                    </li>
+                                </a>
+                            
+                        
+                    
+                        
+                        
+                            
+                                
+                                
+                                <a href="#dom%e7%9b%b8%e5%85%b3%e7%b1%bb%e5%9e%8b">
+                                    <li style="padding-left:23px" class="">
+                                        <i class="ri-checkbox-blank-circle-line"></i>
+                                        &nbsp;&nbsp;DOM相关类型：
+                                    </li>
+                                </a>
+                            
+                        
+                    
+                        
+                        
+                            
+                                
+                                
+                                <a href="#document%e7%9a%84%e5%86%99%e6%93%8d%e4%bd%9c">
+                                    <li style="padding-left:23px" class="">
+                                        <i class="ri-checkbox-blank-circle-line"></i>
+                                        &nbsp;&nbsp;document的写操作：
+                                    </li>
+                                </a>
+                            
+                        
+                    
+                        
+                        
+                            
+                                
+                                
+                                <a href="#element%e7%b1%bb%e5%9e%8b">
+                                    <li style="padding-left:23px" class="">
+                                        <i class="ri-checkbox-blank-circle-line"></i>
+                                        &nbsp;&nbsp;Element类型；
+                                    </li>
+                                </a>
+                            
+                        
+                    
+                </ul>
+            </div>
+        
+                    
+
+
+
+
+    
+        <div>
+            <div class="index-div-prev">
+                <h4>Newer</h4>
+                <p>
+                    <a href="/post/%E7%9B%B4%E6%8E%A5%E8%BE%93%E5%85%A5webpack%E6%89%93%E5%8C%85%E6%8A%A5%E9%94%99insufficient/" rel="next">直接输入webpack打包报错Insufficient number of arguments or no entry found. </a>
+                </p>
+            </div>
+        </div>
+    
+    
+        <div>
+            <div class="index-div-next">
+                <h4>Older</h4>
+                <p>
+                    <a href="/post/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E4%B8%AD%E7%88%B6%E5%AD%90%E7%BB%84%E4%BB%B6%E4%B9%8B%E9%97%B4%E4%BC%A0%E5%80%BC/" rel="prev">小程序中父子组件之间传值</a>
+                </p>
+            </div>
+        </div>
+    
+
+                </div>
+            
+            
+                <div id="reading-bar"></div>
+            
+            <article class="article reveal">
+                <div id="load">
+                    <div class="article-header">
+                        
+    
+        <span class="badge badge-pill badge-danger single-badge">
+            <a href="https://jannyluo.github.io/categories/notes" class="post-header">notes</a>
+        </span>
+    
+
+<span title="预计阅读时长" class="badge badge-pill badge-danger single-badge post-header">
+    2 mins
+</span>
+<h2 class="single-h2">Js小基础</h2>
+<div class="article-list-footer">
+    <span class="article-list-date">18-06-20</span>
+    <span class="article-list-divider">/</span>
+    <span class="article-list-minutes">284 Words</span>
+</div>
+<div class="single-line"></div>
+                    </div>
+                    <div class="article-content">
+                        <h2 id="字符串数组">字符串数组：</h2>
+<ol>
+<li>length属性无法获取字符串索引的元素。</li>
+<li>无法使用for循环遍历字符串索引的数组。</li>
+<li>字符串数组可以使用for..in循环。</li>
+</ol>
+<ul>
+<li>数组常用方法：  数组名.方法名</li>
+</ul>
+<ol>
+<li>排序sort（）  ：按字符串顺序排列，非string类型会自动转换为string类型。</li>
+<li>反转数组 reverse（）</li>
+<li>把数组拼接成一个字符串 join（）：默认将数组中的元素以逗号隔开。 以其他形式隔开：var str=array.join(“-“)</li>
+<li>将多个数组拼接成一个数组 concat（）: array.concat(names)      or       array.concat(names, ages)</li>
+<li>toString 转换为字符串： 功能与没有参数的join（）方法相同</li>
+<li>valueOf（）：输出时自动调用valueOf方法，不需要自己调用</li>
+<li>迭代数组</li>
+<li>forEach（）</li>
+<li>向数组末尾添加元素 push（）</li>
+</ol>
+<h2 id="二维数组">二维数组</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">var nums=new array();
+nums[0]=new array();
+nums[1]=new array();
+使用二重循环生成数组，输出数组：
+			var nums=new Array();
+			for(var i=0;i&lt;4;i++){
+				nums[i]=new Array;
+				for(var j=0;j&lt;4;j++){
+					nums[i][j]=parseInt(Math.random()*99+1);
+				}
+			}
+			for(var i=0;i&lt;nums.length;i++){
+				for(var j=0;j&lt;nums[i].length;j++){
+					document.write(nums[i][j]+&#34;&amp;nbsp;&amp;nbsp;&#34;)
+				}
+				document.write(&#34;&lt;/br&gt;&#34;)
+			}
+</code></pre></div><ul>
+<li>冒泡排序法：两两进行比较 ，N个数字，比较N-1轮，每一轮比较N-i-1次。</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">var nums=[20,30,11,22,38,89,2];
+			for(var i=0;i&lt;nums.length-1;i++){
+				for(var j=0;j&lt;nums.length-i-1;j++){
+					if(nums[j]&gt;nums[j+1]){
+						var temp=nums[j];
+						nums[j]=nums[j+1];
+						nums[j+1]=temp;
+					}
+				}
+			}
+			document.write(nums);		
+</code></pre></div><ul>
+<li>特定计算   eval（）</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">var exp=prompt(&#34;请输入一个表达式：&#34;);
+			var x=3,y=8;
+			document.write(eval(exp));
+</code></pre></div><ul>
+<li>判断非数字 isNaN.   非数字返回ture</li>
+<li>判断是否为有限数字  isFinite</li>
+<li>编码 解码  encodeURI    decodeURI: 使用iso8859-1。    escape，unescape：使用utf-8</li>
+</ul>
+<h2 id="定义函数-调用函数">定义函数 调用函数</h2>
+<ul>
+<li>JS中没有重载的概念，后面定义的同名函数会覆盖前面的函数。</li>
+<li>本身NaN等表示的是false</li>
+<li>如果想输入的实参NaN等类型的表示为0，可以使用：</li>
+</ul>
+<ul>
+<li>
+<p>if（！a）{ a=0 }.   a为第一个形参。</p>
+</li>
+<li>
+<p>a=a||0;  b=b||0;</p>
+</li>
+<li>
+<p>使用return关键字返回函数运行结果。</p>
+</li>
+</ul>
+<ul>
+<li>
+<p>javascript代码的解析：</p>
+</li>
+<li>
+<p>变量提升：声明提升，赋值没有提升。</p>
+</li>
+<li>
+<p>预解析（全局作用域）：首先将变量var和函数function的声明提前到作用域的最上面，需要注意的是变量的赋值操作不会提前。</p>
+</li>
+<li>
+<p>然后执行代码，从上往下。</p>
+</li>
+<li>
+<p>当执行函数时会进入函数内部，再次预解析（局部作用域）</p>
+</li>
+<li>
+<p>函数声明： function func1(){}</p>
+</li>
+<li>
+<p>函数表达式：var fn=function(){}    没有函数名 ，称为匿名函数</p>
+</li>
+<li>
+<p>两种方式的区别：函数声明在编写时可以先调用，再声明。 函数表达式必须先定义，再调用。</p>
+</li>
+<li>
+<p>回调函数：回头再调用此函数，当满足一定的条件时再调用,只需要写函数名，不需要写括号，赋值。
+<code>window.onclick=show2.</code></p>
+</li>
+<li>
+<p>数据类型：string , number , boolean,  null, undefined, object, function</p>
+</li>
+<li>
+<p>函数也是一种数据类型。也可以作为一个函数的参数。</p>
+</li>
+</ul>
+<h2 id="匿名函数">匿名函数：</h2>
+<ol>
+<li>一般用于回调。 window.onclick=function(){}</li>
+<li>也可能用于一次性执行的函数.   (function(){}) ();</li>
+</ol>
+<ul>
+<li>在调用函数的时候，也可以用匿名函数作为另一个函数的参数：     show(2,3,function(){});</li>
+</ul>
+<h2 id="javascript的组成-ecmascript-dom-bom">javascript的组成： ECMAScript， DOM， BOM。</h2>
+<ul>
+<li>DOM：document object model</li>
+<li>文档对象模型</li>
+<li>作用：</li>
+</ul>
+<ol>
+<li>获取页面中的元素</li>
+<li>获取/设置元素的属性</li>
+<li>获取/设置元素的样式</li>
+<li>添加/删除元素</li>
+<li>绑定事件——触发响应</li>
+</ol>
+<h2 id="window对象">window对象：</h2>
+<ul>
+<li>常用属性：</li>
+</ul>
+<ul>
+<li>screen（获取计算机屏幕的信息，分辨率等），history，location，  document，用法：对象名.属性名</li>
+</ul>
+<ul>
+<li>常用方法：</li>
+</ul>
+<ol>
+<li>alert(“显示一个带有提示信息和确定按钮的警告对话框“)；</li>
+<li>prompt(“显示一个带有提示信息，确定和取消按钮以及文本输入框的对话框“）</li>
+<li>confirm(“显示一个带有提示信息，确定和取消按钮的对话框“）</li>
+<li>open（url，name，option）打开具有指定名称的新窗口，并加载给定的URL所指定的文档。</li>
+<li>showModalDialog（）在一个模式窗口中显示指定的HTML文档。 模式窗口是打开了新的页面后，不能对原来的页面进行操作。(chrome不支持，火狐支持）</li>
+<li>close（） 关闭当前的窗口</li>
+<li>setTimeout（func，delay）设置一次性定时器，经过指定毫秒值后执行某个函数。</li>
+<li>setInterval（func，delay）设置周期性定时器，周期性循环执行某个函数。</li>
+<li>clearTimeout（timer） 清除一次性定时器</li>
+<li>clearInterval（timer）清除周期性定时器</li>
+</ol>
+<h2 id="常用事件">常用事件</h2>
+<ol>
+<li>onload:	 window.onload=function(){}.    页面加载完成</li>
+<li>onmouseover:  鼠标悬浮在窗体之上</li>
+<li>onmouseout: 鼠标离开窗体</li>
+<li>onclick: 窗体被点击</li>
+<li>onkeydown: 在窗体上按下了某个按键</li>
+<li>onscroll：滚动条滚动</li>
+</ol>
+<h2 id="history对象表示历史">history对象：表示历史</h2>
+<p>方法：</p>
+<ol>
+<li>back（） 相当于后退按钮</li>
+<li>forward（） 相当于前进按钮</li>
+<li>go（URL or number） 加载histor列表中的一个url，或要求浏览器移动指定的页面数。例如 go（-1）</li>
+</ol>
+<h2 id="location对象">location对象：</h2>
+<ul>
+<li>属性：</li>
+<li>href： 跳转     location.href=“”;      获取地址： location.href</li>
+<li>方法：</li>
+<li>reload()</li>
+<li>this表示触发事件的元素，事件源</li>
+</ul>
+<h2 id="document对象">document对象：</h2>
+<ul>
+<li>属性：</li>
+</ul>
+<ol>
+<li>bgcolor； 设置页面背景</li>
+<li>title： 获取标题</li>
+<li>body：获取body</li>
+</ol>
+<ul>
+<li>方法：</li>
+</ul>
+<ol>
+<li>write（） ：在当前页面中输出指定内容</li>
+<li>getElementById（） ：返回指定id的第一个对象的引用</li>
+<li>getElementsByName（）：返回带有指定名称的对象的集合</li>
+<li>getElementsByTagName（）：返回带有指定标签名的对象的集合</li>
+<li></li>
+</ol>
+<ul>
+<li>DOM对象的属性和HTML标签的属性几乎一样</li>
+<li>src，name，id，href，title等</li>
+<li>type， value， checked，selected，disable等</li>
+<li>获取/设置标签中内容的属性：</li>
+<li>innerHTML： 会把内容解析到DOM树上</li>
+<li>innerText：内容会被认为是纯文本</li>
+</ul>
+<h2 id="dom相关类型">DOM相关类型：</h2>
+<ol>
+<li>Node：节点</li>
+<li>Document：文档</li>
+<li>Element：元素                         文档，元素，文本，属性等，都可以称为节点</li>
+<li>Text：文本</li>
+<li>Attr：属性</li>
+</ol>
+<ul>
+<li>
+<p>NodeList：节点列表集合</p>
+</li>
+<li>
+<p>NamedNodeMap：属性映射集合</p>
+</li>
+<li>
+<p>Document类型： 表示DOM树的最顶层节点，对应于HTML文档</p>
+</li>
+</ul>
+<ul>
+<li>属性：</li>
+</ul>
+<ol>
+<li>
+<pre><code>         childNodes：子节点列表
+</code></pre>
+</li>
+<li>
+<pre><code>          documentElement：获取文档的根元素
+</code></pre>
+</li>
+</ol>
+<ul>
+<li>方法：</li>
+</ul>
+<ol>
+<li>
+<pre><code>         createElement（元素名）：创建元素节点
+</code></pre>
+</li>
+<li>
+<pre><code>         createTextNode（文本内容）：创建文本节点
+</code></pre>
+</li>
+<li>
+<pre><code>      appendChild（子节点）：添加子节点，主要添加根元素
+</code></pre>
+</li>
+<li>
+<pre><code>  createNode（类型，名称）：根据条件创建一个新节点
+</code></pre>
+</li>
+</ol>
+<ul>
+<li>节点类型：1表示元素节点   2表示属性节点。 3表示文本节点</li>
+</ul>
+<h2 id="document的写操作">document的写操作：</h2>
+<ol>
+<li>创建新元素：var li=document.createElement(“li”);</li>
+<li>设置文本内容：var txt=document.createTextNode(“itany4”);         li.appendChild(txt);</li>
+<li>设置属性：li.setAttribute(“id’,”fourth”)</li>
+<li>找到父元素：var ul=document.getElementById(“myul”);</li>
+<li>追加：ul.appendChild(li);</li>
+</ol>
+<ul>
+<li>getElementById()只有document对象有，getElementsByTagName其他的dom对象也有。</li>
+</ul>
+<h2 id="element类型">Element类型；</h2>
+<ul>
+<li>属性：</li>
+</ul>
+<ol>
+<li>nodeName：元素名</li>
+<li>attributes：返回属性集合，NamedNodeMap类型</li>
+<li>childNodes：返回子节点集合，NodeList类型</li>
+<li>firstChild/lastChild：第一个/最后一个子节点</li>
+<li>parentNode：返回元素的父节点</li>
+</ol>
+<ul>
+<li>方法：</li>
+</ul>
+<ol>
+<li>appendChild（）：添加子节点，包括子元素，文本节点等。</li>
+<li>getAttribute（）：获取指定属性的值</li>
+<li>setAttribute（）：添加/修改属性</li>
+</ol>
+<ul>
+<li>element 的插入，删除，替换，克隆。</li>
+</ul>
+<ol>
+<li>克隆：node.cloneNode(ture|false) 是否包括内容</li>
+<li>插入：parent.insertBefore(新的节点，已经存在的节点）</li>
+<li>删除：parent.removeChild(要删除的节点）</li>
+<li>替换：parent.replaceChild(新的节点，被替换的节点）</li>
+</ol>
+<ul>
+<li>
+<p>JavaScript访问CSS</p>
+</li>
+<li>
+<p>mydiv.style.color=“”;</p>
+</li>
+<li>
+<p>获得焦点： onFocus</p>
+</li>
+<li>
+<p>失去焦点：onblur</p>
+</li>
+<li>
+<p>类选择器className</p>
+</li>
+</ul>
+
+                    </div>
+                    
+                    
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+    <div>
+    <a href="" target="_blank" style="text-decoration:none">
+        <div class="goup-container footer-github">
+            <i class="ri-github-fill footer-github-icon"></i>
+        </div>
+    </a>
+    <div class="footer reveal">
+        
+            <p>
+                Copyright&nbsp;<i class="ri-copyright-line"></i>&nbsp;·&nbsp;2020&nbsp;·&nbsp;This is Janny&nbsp;·&nbsp;
+                <a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" style="text-decoration: none;color: inherit;font-size: 14px;font-weight: 500;">
+                    CC BY-NC 4.0
+                </a>
+            </p>
+        
+        <p>
+            
+                Powered by <a href="https://github.com/gohugoio/hugo">Hugo</a> | Theme is <a href="https://github.com/ThemeTony/hugo-theme-tony">Tony</a>
+            
+        </p>
+    </div>
+</div>
+
+
+    <script src="/js/jquery.min.js"></script><script src="/js/tony.min.21fb28b08edccb7a220a2a53f8fa67ba2f62588d04437e5a3998769b79537006.js" integrity="sha256-IfsosI7cy3oiCipT+Ppnui9iWI0EQ35aOZh2m3lTcAY="></script><script src="/js/medium-zoom.min.js"></script>
+<script>
+	mediumZoom(document.querySelectorAll('div.article-content img'), {
+        background: '#fff'
+    });
+</script>
+
+
+    
+<script>
+(function(){
+	var bp = document.createElement('script');
+	var curProtocol = window.location.protocol.split(':')[0];
+	if (curProtocol === 'https'){
+	 bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+	}
+	else{
+	bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+	}
+	var s = document.getElementsByTagName("script")[0];
+	s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+
+</html>

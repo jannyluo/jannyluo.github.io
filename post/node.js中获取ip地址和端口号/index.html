@@ -20,12 +20,12 @@
 <link rel="stylesheet" href="/css/remixicon/remixicon.css"><link rel="stylesheet" href="/css/tony.min.2cd909c3b2b4f0eb1f6b8dbe02a8be4ed8a7456895a39f284818ed1e771073c6.css" integrity="sha256-LNkJw7K08Osfa42+Aqi+TtinRWiVo58oSBjtHncQc8Y="/>
 
     <link rel="shortcut icon" href="http://img1.imgtn.bdimg.com/it/u=2050718074,2296818643&amp;fm=26&amp;gp=0.jpg" type="image/x-icon" />
-    <title>Webpack4.43.0安装bable-loader步骤</title>
+    <title>Node.js中获取IP地址和端口号</title>
 
     <meta name="author" content="This is Janny" /><meta name="description" content="" />
 
     
-    <link rel="canonical" href="https://jannyluo.github.io/post/webpack4.43.0%E5%AE%89%E8%A3%85babel-loader%E6%AD%A5%E9%AA%A4/" />
+    <link rel="canonical" href="https://jannyluo.github.io/post/node.js%E4%B8%AD%E8%8E%B7%E5%8F%96ip%E5%9C%B0%E5%9D%80%E5%92%8C%E7%AB%AF%E5%8F%A3%E5%8F%B7/" />
 
 </head>
 
@@ -66,11 +66,20 @@
             <div class="index-div-prev">
                 <h4>Newer</h4>
                 <p>
-                    <a href="/about/" rel="next">About</a>
+                    <a href="/post/node.js%E4%B8%AD%E7%9A%84%E7%BC%96%E7%A0%81%E9%97%AE%E9%A2%98/" rel="next">Node.js中的编码问题</a>
                 </p>
             </div>
         </div>
     
+    
+        <div>
+            <div class="index-div-next">
+                <h4>Older</h4>
+                <p>
+                    <a href="/post/node.js%E4%B8%AD%E7%AE%80%E5%8D%95%E7%9A%84%E6%A8%A1%E5%9D%97%E5%8C%96/" rel="prev">Node.js中简单的模块化</a>
+                </p>
+            </div>
+        </div>
     
 
                 </div>
@@ -84,69 +93,40 @@
                         
     
         <span class="badge badge-pill badge-danger single-badge">
-            <a href="https://jannyluo.github.io/categories/problem" class="post-header">problem</a>
+            <a href="https://jannyluo.github.io/categories/node.js" class="post-header">node.js</a>
         </span>
     
 
 <span title="预计阅读时长" class="badge badge-pill badge-danger single-badge post-header">
     1 mins
 </span>
-<h2 class="single-h2">Webpack4.43.0安装bable-loader步骤</h2>
+<h2 class="single-h2">Node.js中获取IP地址和端口号</h2>
 <div class="article-list-footer">
     <span class="article-list-date">18-06-20</span>
     <span class="article-list-divider">/</span>
-    <span class="article-list-minutes">45 Words</span>
+    <span class="article-list-minutes">11 Words</span>
 </div>
 <div class="single-line"></div>
                     </div>
                     <div class="article-content">
-                        <p>运行打包时报错如下：
-<img src="https://img-blog.csdnimg.cn/20200609201501308.png" alt="截图">
-<em>webpack version：4.43.0</em></p>
-<p>由于在webpack中默认只能处理部分ES6的语法，要借助第三方loader来帮助webpack将高级的语法转换成低级的语法</p>
-<p>首先要安装的三个：<strong>babel-loader、babel-core、babel-preset-env</strong></p>
-<ol>
-<li>安装babel-loader（<em>不要把babel打成bable！！！！！！</em>）</li>
-</ol>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"> npm i babel-loader -D  
-</code></pre></div><ol start="2">
-<li>安装babel-core</li>
-</ol>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">npm install -D babel-core
-</code></pre></div><ol start="3">
-<li>安装babel-preset-env</li>
-</ol>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">npm install -D babel-preset-env
-</code></pre></div><ol start="4">
-<li>这三个包安装好之后在项目的根目录创建一个./babelrc文件，
-./babelrc的配置：</li>
-</ol>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#f92672">{</span>
-  <span style="color:#e6db74">&#34;presets&#34;</span>: <span style="color:#f92672">[</span><span style="color:#e6db74">&#34;env&#34;</span><span style="color:#f92672">]</span>
-<span style="color:#f92672">}</span>
-</code></pre></div><ol start="5">
-<li>在webpack.config.js中的module对象的rules属性添加一项：</li>
-</ol>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"> <span style="color:#f92672">{</span>test:/<span style="color:#ae81ff">\.</span>js$/,use:<span style="color:#e6db74">&#39;babel-loader&#39;</span>,exclude:<span style="color:#e6db74">&#39;/node_modules/&#39;</span><span style="color:#f92672">}</span>
-</code></pre></div><ol start="6">
-<li>保存运行截图
-<img src="https://img-blog.csdnimg.cn/20200609211225998.png" alt="截图">
-提示还需要两个插件才能正常的运行</li>
-<li>安装需要的两个插件</li>
-</ol>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">npm i @babel/plugin-proposal-class-properties
-npm i @babel/plugin-syntax-class-properties
-</code></pre></div><ol start="8">
-<li>安装完毕之后在./babelrc中添加配置</li>
-</ol>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#f92672">{</span>
-  <span style="color:#e6db74">&#34;presets&#34;</span>: <span style="color:#f92672">[</span><span style="color:#e6db74">&#34;env&#34;</span><span style="color:#f92672">]</span>,
-  <span style="color:#e6db74">&#34;plugins&#34;</span>: <span style="color:#f92672">[</span><span style="color:#e6db74">&#34;@babel/plugin-proposal-class-properties&#34;</span>,<span style="color:#e6db74">&#34;@babel/plugin-syntax-class-properties&#34;</span><span style="color:#f92672">]</span>
-  <span style="color:#f92672">}</span>
-</code></pre></div><ol start="9">
-<li>保存重新运行之后可以成功打包。
-<img src="https://img-blog.csdnimg.cn/20200609211550368.png" alt="截图"></li>
-</ol>
+                        <ul>
+<li>IP地址用来定位计算机，</li>
+<li>端口号用来定位具体的应用程序</li>
+<li>所有需要联网的软件都需要有端口号</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">server.on(&#39;request&#39;,function (request,response) {
+    console.log(&#39;请求的路径是：&#39;+request.socket.remoteAddress)
+</code></pre></div><ul>
+<li>
+<p>端口号是: request.socket.remotePort</p>
+</li>
+<li>
+<p>端口号的范围：0—65536</p>
+</li>
+<li>
+<p>在计算机中有一些默认你的端口号，不要去使用:例如http服务的80</p>
+</li>
+</ul>
 
                     </div>
                     
