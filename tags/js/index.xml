@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>js on Janny</title>
+    <link>https://jannyluo.github.io/tags/js/</link>
+    <description>Recent content in js on Janny</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 18 Jun 2020 22:30:33 +0800</lastBuildDate>
+    
+	<atom:link href="https://jannyluo.github.io/tags/js/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Js小基础</title>
+      <link>https://jannyluo.github.io/post/js%E5%B0%8F%E5%9F%BA%E7%A1%80/</link>
+      <pubDate>Thu, 18 Jun 2020 22:30:33 +0800</pubDate>
+      
+      <guid>https://jannyluo.github.io/post/js%E5%B0%8F%E5%9F%BA%E7%A1%80/</guid>
+      <description>字符串数组：  length属性无法获取字符串索引的元素。 无法使用for循环遍历字符串索引的数组。 字符串数组可以使用for..in循环。   数组常用方法： 数组名.方法名   排序sort（） ：按字符串顺序排列，非string类型会自动转换为string类型。 反转数组 reverse（） 把数组拼接成一个字符串 join（）：默认将数组中的元素以逗号隔开。 以其他形式隔开：var str=array.join(“-“) 将多个数组拼接成一个数组 concat（）: array.concat(names) or array.concat(names, ages) toString 转换为字符串： 功能与没有参数的join（）方法相同 valueOf（）：输出时自动调用valueOf方法，不需要自己调用 迭代数组 forEach（） 向数组末尾添加元素 push（）  二维数组 var nums=new array(); nums[0]=new array(); nums[1]=new array(); 使用二重循环生成数组，输出数组： var nums=new Array(); for(var i=0;i&amp;lt;4;i++){ nums[i]=new Array; for(var j=0;j&amp;lt;4;j++){ nums[i][j]=parseInt(Math.random()*99+1); } } for(var i=0;i&amp;lt;nums.length;i++){ for(var j=0;j&amp;lt;nums[i].length;j++){ document.write(nums[i][j]+&amp;quot;&amp;amp;nbsp;&amp;amp;nbsp;&amp;quot;) } document.write(&amp;quot;&amp;lt;/br&amp;gt;&amp;quot;) }  冒泡排序法：两两进行比较 ，N个数字，比较N-1轮，每一轮比较N-i-1次。  var nums=[20,30,11,22,38,89,2]; for(var i=0;i&amp;lt;nums.</description>
+    </item>
+    
+  </channel>
+</rss>

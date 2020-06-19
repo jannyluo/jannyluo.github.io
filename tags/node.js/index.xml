@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Node.js on Janny</title>
+    <link>https://jannyluo.github.io/tags/node.js/</link>
+    <description>Recent content in Node.js on Janny</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 18 Jun 2020 22:11:07 +0800</lastBuildDate>
+    
+	<atom:link href="https://jannyluo.github.io/tags/node.js/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Node.js中的模板引擎</title>
+      <link>https://jannyluo.github.io/post/node.js%E4%B8%AD%E7%9A%84%E6%A8%A1%E6%9D%BF%E5%BC%95%E6%93%8E/</link>
+      <pubDate>Thu, 18 Jun 2020 22:11:07 +0800</pubDate>
+      
+      <guid>https://jannyluo.github.io/post/node.js%E4%B8%AD%E7%9A%84%E6%A8%A1%E6%9D%BF%E5%BC%95%E6%93%8E/</guid>
+      <description> 安装 npm install art-template 使用  Var template=require(‘art-template’) Var fs=reqiure(‘fs’) Fs.readfile(‘./tpl.html’,function(err,data){ If(err){ } Var ret=template.render(data.toString(),{ Name:’jack’, Age:’18’, Province:’Beijing’, Hobbies:[ ‘写代码’， ’唱歌’， ‘打游戏’] }) Tpl.html的内容：
+大家好，我叫:{{ name }} 我今年：{{ age }} 我来自： {{ province }} 我喜欢： {{ each hobbies }} {{ $value }} {{/each}}  模板引擎不关心内容，只关心{{ }}  </description>
+    </item>
+    
+    <item>
+      <title>Node.js中的目录渲染</title>
+      <link>https://jannyluo.github.io/post/node.js%E4%B8%AD%E7%9A%84%E7%9B%AE%E5%BD%95%E6%B8%B2%E6%9F%93/</link>
+      <pubDate>Thu, 18 Jun 2020 22:10:20 +0800</pubDate>
+      
+      <guid>https://jannyluo.github.io/post/node.js%E4%B8%AD%E7%9A%84%E7%9B%AE%E5%BD%95%E6%B8%B2%E6%9F%93/</guid>
+      <description> 在模板template.html中需要替换的位置预留一个特殊的标记 根据files生成需要的html内容  server.on(‘request’,function(req,res){ Fs.readfile(‘/‘.function(err,data){ If(err){ Return res.end(‘404 not found’) } Res.end(data) } fs.readdir(‘/‘,function(err, files){ If(err){} Var content=` ` Files.forEach(function(item){ content+=`&amp;lt;tr&amp;gt;//${item}/&amp;lt;/tr&amp;gt; } data=data.toString() data=data.replace(data&amp;amp;,content) Res.end(data) } })  ${}可以用来引用变量  </description>
+    </item>
+    
+    <item>
+      <title>Node.js中的编码问题</title>
+      <link>https://jannyluo.github.io/post/node.js%E4%B8%AD%E7%9A%84%E7%BC%96%E7%A0%81%E9%97%AE%E9%A2%98/</link>
+      <pubDate>Thu, 18 Jun 2020 22:08:44 +0800</pubDate>
+      
+      <guid>https://jannyluo.github.io/post/node.js%E4%B8%AD%E7%9A%84%E7%BC%96%E7%A0%81%E9%97%AE%E9%A2%98/</guid>
+      <description>node.js中的编码问题  在服务器默认发送的数据，其实是utf8编码的内容 但浏览器不知道你是utf8编码的内容 浏览器在不知道服务器响应内容的编码的情况下会按照当前操作系统的默认编码去解析 中文操作系统默认是gbk 解决方法就是正确的告诉浏览器我发送给你的内容是什么编码的 在http协议中，Content-Type就是用来告知对方数据的类型 Text/plain是普通文本 text/html是html代码 image/jpeg   如果要引用其他文件的html代码就用fs.readFile  res.setHeader(&#39;Content-Type&#39;,&#39;text/plain;charset=utf-8&#39;) res.end(&#39;你好哈哈哈哈’) else if(req.url===&#39;/login&#39;){ res.setHeader(&#39;Content-Type&#39;,&#39;text/html;charset=utf-8&#39;) res.end( &#39;&amp;lt;a href&amp;gt;百度&amp;lt;/a&amp;gt;&#39; ) } 当采用无分号的代码风格时，需要注意
+ 当一行代码是以：（ [ ` 开头的时候要加分号  </description>
+    </item>
+    
+    <item>
+      <title>Node.js中获取IP地址和端口号</title>
+      <link>https://jannyluo.github.io/post/node.js%E4%B8%AD%E8%8E%B7%E5%8F%96ip%E5%9C%B0%E5%9D%80%E5%92%8C%E7%AB%AF%E5%8F%A3%E5%8F%B7/</link>
+      <pubDate>Thu, 18 Jun 2020 22:07:28 +0800</pubDate>
+      
+      <guid>https://jannyluo.github.io/post/node.js%E4%B8%AD%E8%8E%B7%E5%8F%96ip%E5%9C%B0%E5%9D%80%E5%92%8C%E7%AB%AF%E5%8F%A3%E5%8F%B7/</guid>
+      <description> IP地址用来定位计算机， 端口号用来定位具体的应用程序 所有需要联网的软件都需要有端口号  server.on(&#39;request&#39;,function (request,response) { console.log(&#39;请求的路径是：&#39;+request.socket.remoteAddress)   端口号是: request.socket.remotePort
+  端口号的范围：0—65536
+  在计算机中有一些默认你的端口号，不要去使用:例如http服务的80
+  </description>
+    </item>
+    
+    <item>
+      <title>Node.js中简单的模块化</title>
+      <link>https://jannyluo.github.io/post/node.js%E4%B8%AD%E7%AE%80%E5%8D%95%E7%9A%84%E6%A8%A1%E5%9D%97%E5%8C%96/</link>
+      <pubDate>Thu, 18 Jun 2020 22:05:34 +0800</pubDate>
+      
+      <guid>https://jannyluo.github.io/post/node.js%E4%B8%AD%E7%AE%80%E5%8D%95%E7%9A%84%E6%A8%A1%E5%9D%97%E5%8C%96/</guid>
+      <description> 用require来引用别的文件  require（’./b.js’）//可以省略后缀名js 2. node中没有全局作用域，只有模块作用域//外部不能访问内部，内部不能访问外部！//文件作用域 3. require方法有两个作用：
+   加载文件并执行里面的代码    拿到被加载文件模块导出的接口对象     每一个文件模块中都提供了一个对象：exports exports默认是一个空对象 你要做的就是把所有需要被外部访问的成员挂载到exports对象中。 a.js  var bExport=require(&#39;./demo例子&#39;) console.log(bExport.add(2,3)) b.js exports.add=function(a,b) { return a*b; } </description>
+    </item>
+    
+    <item>
+      <title>Node.js中的读写文件</title>
+      <link>https://jannyluo.github.io/post/node-js%E4%B8%AD%E7%9A%84%E8%AF%BB%E5%86%99%E6%96%87%E4%BB%B6/</link>
+      <pubDate>Thu, 18 Jun 2020 22:03:56 +0800</pubDate>
+      
+      <guid>https://jannyluo.github.io/post/node-js%E4%B8%AD%E7%9A%84%E8%AF%BB%E5%86%99%E6%96%87%E4%BB%B6/</guid>
+      <description> node中的js具有文件操作的能力  var fs=require（’fs’）//使用require方法加载fs核心模块 fs.readFile(‘./demo.txt’,function(error,data){ console.log() }  有两个参数，第一个是文件路径，第二个是一个回调函数。 function的两个参数： 成功 data&amp;ndash;数据 error&amp;ndash;null 失败 data—null error&amp;ndash;错误对象  node写入文件  var fs=require（’fs’） fs.writeFile(‘./demo1.txt’,’hellohowareyou’,’function(error){ If(error) { console.log(‘fail&#39;) } Else(){console.log(’SUCCESS!’)}   有三个参数：路径，内容，回调函数
+  成功： error是null
+  失败： error是错误对象
+  Node为js提供了很多服务器级别的API，这些API绝大多数都被包装到了一个具名 的核心模块中，例如文件操作的fs模块，http服务器构建的http模块，path路径操作模块，os操作信息模块。
+  </description>
+    </item>
+    
+    <item>
+      <title>Node.js中的http服务</title>
+      <link>https://jannyluo.github.io/post/node.js%E4%B8%AD%E7%9A%84http%E6%9C%8D%E5%8A%A1/</link>
+      <pubDate>Thu, 18 Jun 2020 22:01:31 +0800</pubDate>
+      
+      <guid>https://jannyluo.github.io/post/node.js%E4%B8%AD%E7%9A%84http%E6%9C%8D%E5%8A%A1/</guid>
+      <description>构建一个web服务器
+在node中提供了一个核心模块：http（创建编写服务器）
+ 加载http核心模块 var http=require（’http’） 创建一个web服务器，返回一个server实例 var server=http.createServer( ) 服务器要干嘛   提供服务 发请求 接受请求 处理请求 给个反馈（发送响应） 注册request请求事件 当客户端请求过来，就会自动触发服务器的request请求事件，然后执行第二个参数（回调函数） server.on(‘request’, function(request, response){}） response可以向客户端响应内容 reponse.write(&#39;&#39;) 结尾一定要加 reponse.end( ) 否则无法响应！！！！！ response.end()  上面这种方式几乎不用，要用到
+ response.end(&#39;&#39;) 4.绑定端口号，启动服务器 server.listen(3000,function(){})  </description>
+    </item>
+    
+  </channel>
+</rss>

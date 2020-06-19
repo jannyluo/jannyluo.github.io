@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on Janny</title>
+    <link>https://jannyluo.github.io/tags/</link>
+    <description>Recent content in Tags on Janny</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 19 Jun 2020 14:17:35 +0800</lastBuildDate>
+    
+	<atom:link href="https://jannyluo.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>tagA</title>
+      <link>https://jannyluo.github.io/tags/taga/</link>
+      <pubDate>Fri, 19 Jun 2020 14:17:35 +0800</pubDate>
+      
+      <guid>https://jannyluo.github.io/tags/taga/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>tagB</title>
+      <link>https://jannyluo.github.io/tags/tagb/</link>
+      <pubDate>Fri, 19 Jun 2020 14:17:35 +0800</pubDate>
+      
+      <guid>https://jannyluo.github.io/tags/tagb/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>js</title>
+      <link>https://jannyluo.github.io/tags/js/</link>
+      <pubDate>Thu, 18 Jun 2020 22:30:33 +0800</pubDate>
+      
+      <guid>https://jannyluo.github.io/tags/js/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>小程序笔记</title>
+      <link>https://jannyluo.github.io/tags/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E7%AC%94%E8%AE%B0/</link>
+      <pubDate>Thu, 18 Jun 2020 22:13:32 +0800</pubDate>
+      
+      <guid>https://jannyluo.github.io/tags/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E7%AC%94%E8%AE%B0/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Node.js</title>
+      <link>https://jannyluo.github.io/tags/node.js/</link>
+      <pubDate>Thu, 18 Jun 2020 22:11:07 +0800</pubDate>
+      
+      <guid>https://jannyluo.github.io/tags/node.js/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>AMP</title>
+      <link>https://jannyluo.github.io/tags/amp/</link>
+      <pubDate>Thu, 31 May 2018 07:11:59 +0700</pubDate>
+      
+      <guid>https://jannyluo.github.io/tags/amp/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>theme</title>
+      <link>https://jannyluo.github.io/tags/theme/</link>
+      <pubDate>Thu, 31 May 2018 07:11:59 +0700</pubDate>
+      
+      <guid>https://jannyluo.github.io/tags/theme/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>hugo</title>
+      <link>https://jannyluo.github.io/tags/hugo/</link>
+      <pubDate>Mon, 28 May 2018 13:22:14 +0700</pubDate>
+      
+      <guid>https://jannyluo.github.io/tags/hugo/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

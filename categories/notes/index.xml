@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>notes on Janny</title>
+    <link>https://jannyluo.github.io/categories/notes/</link>
+    <description>Recent content in notes on Janny</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 18 Jun 2020 22:30:33 +0800</lastBuildDate>
+    
+	<atom:link href="https://jannyluo.github.io/categories/notes/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Js小基础</title>
+      <link>https://jannyluo.github.io/post/js%E5%B0%8F%E5%9F%BA%E7%A1%80/</link>
+      <pubDate>Thu, 18 Jun 2020 22:30:33 +0800</pubDate>
+      
+      <guid>https://jannyluo.github.io/post/js%E5%B0%8F%E5%9F%BA%E7%A1%80/</guid>
+      <description>字符串数组：  length属性无法获取字符串索引的元素。 无法使用for循环遍历字符串索引的数组。 字符串数组可以使用for..in循环。   数组常用方法： 数组名.方法名   排序sort（） ：按字符串顺序排列，非string类型会自动转换为string类型。 反转数组 reverse（） 把数组拼接成一个字符串 join（）：默认将数组中的元素以逗号隔开。 以其他形式隔开：var str=array.join(“-“) 将多个数组拼接成一个数组 concat（）: array.concat(names) or array.concat(names, ages) toString 转换为字符串： 功能与没有参数的join（）方法相同 valueOf（）：输出时自动调用valueOf方法，不需要自己调用 迭代数组 forEach（） 向数组末尾添加元素 push（）  二维数组 var nums=new array(); nums[0]=new array(); nums[1]=new array(); 使用二重循环生成数组，输出数组： var nums=new Array(); for(var i=0;i&amp;lt;4;i++){ nums[i]=new Array; for(var j=0;j&amp;lt;4;j++){ nums[i][j]=parseInt(Math.random()*99+1); } } for(var i=0;i&amp;lt;nums.length;i++){ for(var j=0;j&amp;lt;nums[i].length;j++){ document.write(nums[i][j]+&amp;quot;&amp;amp;nbsp;&amp;amp;nbsp;&amp;quot;) } document.write(&amp;quot;&amp;lt;/br&amp;gt;&amp;quot;) }  冒泡排序法：两两进行比较 ，N个数字，比较N-1轮，每一轮比较N-i-1次。  var nums=[20,30,11,22,38,89,2]; for(var i=0;i&amp;lt;nums.</description>
+    </item>
+    
+    <item>
+      <title>小程序中父子组件之间传值</title>
+      <link>https://jannyluo.github.io/post/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E4%B8%AD%E7%88%B6%E5%AD%90%E7%BB%84%E4%BB%B6%E4%B9%8B%E9%97%B4%E4%BC%A0%E5%80%BC/</link>
+      <pubDate>Thu, 18 Jun 2020 22:13:32 +0800</pubDate>
+      
+      <guid>https://jannyluo.github.io/post/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E4%B8%AD%E7%88%B6%E5%AD%90%E7%BB%84%E4%BB%B6%E4%B9%8B%E9%97%B4%E4%BC%A0%E5%80%BC/</guid>
+      <description>子组件向父组件传值 子组件通过自定义参数传递，父组件在properties中接收
+properties：{ Tabs(属性名):{ Type:Array; (数据类型） Value:[ ] } } properties中的值和data中的值一样，可以直接使用
+ 父组件向子组件传值 This.triggerEvent(“方法”,参数）  </description>
+    </item>
+    
+    <item>
+      <title>小程序的缓存</title>
+      <link>https://jannyluo.github.io/post/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E7%9A%84%E7%BC%93%E5%AD%98/</link>
+      <pubDate>Thu, 18 Jun 2020 22:12:25 +0800</pubDate>
+      
+      <guid>https://jannyluo.github.io/post/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E7%9A%84%E7%BC%93%E5%AD%98/</guid>
+      <description> 判断本地存储中有没有旧的数据。{time:Date.now(),data:[. ]} 没有旧的数据则重新发送请求 有旧的数据同时旧的数据没有过期则使用本地存储  const Cates=wx.getStorageSync(“cates”) If(!Cates){ this.getCates() }else{ If(Date.now()-Cates.time)&amp;gt;1000*10){ this.getCates() }else{ this.Cates=Cates.data let leftMenuList=this.Cates.map(v=&amp;gt;v.cat_name) let rightContent=this.Cates[0].children this.setData({ leftMenuList rightContent }) } } </description>
+    </item>
+    
+    <item>
+      <title>Node.js中的模板引擎</title>
+      <link>https://jannyluo.github.io/post/node.js%E4%B8%AD%E7%9A%84%E6%A8%A1%E6%9D%BF%E5%BC%95%E6%93%8E/</link>
+      <pubDate>Thu, 18 Jun 2020 22:11:07 +0800</pubDate>
+      
+      <guid>https://jannyluo.github.io/post/node.js%E4%B8%AD%E7%9A%84%E6%A8%A1%E6%9D%BF%E5%BC%95%E6%93%8E/</guid>
+      <description> 安装 npm install art-template 使用  Var template=require(‘art-template’) Var fs=reqiure(‘fs’) Fs.readfile(‘./tpl.html’,function(err,data){ If(err){ } Var ret=template.render(data.toString(),{ Name:’jack’, Age:’18’, Province:’Beijing’, Hobbies:[ ‘写代码’， ’唱歌’， ‘打游戏’] }) Tpl.html的内容：
+大家好，我叫:{{ name }} 我今年：{{ age }} 我来自： {{ province }} 我喜欢： {{ each hobbies }} {{ $value }} {{/each}}  模板引擎不关心内容，只关心{{ }}  </description>
+    </item>
+    
+    <item>
+      <title>Node.js中的目录渲染</title>
+      <link>https://jannyluo.github.io/post/node.js%E4%B8%AD%E7%9A%84%E7%9B%AE%E5%BD%95%E6%B8%B2%E6%9F%93/</link>
+      <pubDate>Thu, 18 Jun 2020 22:10:20 +0800</pubDate>
+      
+      <guid>https://jannyluo.github.io/post/node.js%E4%B8%AD%E7%9A%84%E7%9B%AE%E5%BD%95%E6%B8%B2%E6%9F%93/</guid>
+      <description> 在模板template.html中需要替换的位置预留一个特殊的标记 根据files生成需要的html内容  server.on(‘request’,function(req,res){ Fs.readfile(‘/‘.function(err,data){ If(err){ Return res.end(‘404 not found’) } Res.end(data) } fs.readdir(‘/‘,function(err, files){ If(err){} Var content=` ` Files.forEach(function(item){ content+=`&amp;lt;tr&amp;gt;//${item}/&amp;lt;/tr&amp;gt; } data=data.toString() data=data.replace(data&amp;amp;,content) Res.end(data) } })  ${}可以用来引用变量  </description>
+    </item>
+    
+    <item>
+      <title>Node.js中的编码问题</title>
+      <link>https://jannyluo.github.io/post/node.js%E4%B8%AD%E7%9A%84%E7%BC%96%E7%A0%81%E9%97%AE%E9%A2%98/</link>
+      <pubDate>Thu, 18 Jun 2020 22:08:44 +0800</pubDate>
+      
+      <guid>https://jannyluo.github.io/post/node.js%E4%B8%AD%E7%9A%84%E7%BC%96%E7%A0%81%E9%97%AE%E9%A2%98/</guid>
+      <description>node.js中的编码问题  在服务器默认发送的数据，其实是utf8编码的内容 但浏览器不知道你是utf8编码的内容 浏览器在不知道服务器响应内容的编码的情况下会按照当前操作系统的默认编码去解析 中文操作系统默认是gbk 解决方法就是正确的告诉浏览器我发送给你的内容是什么编码的 在http协议中，Content-Type就是用来告知对方数据的类型 Text/plain是普通文本 text/html是html代码 image/jpeg   如果要引用其他文件的html代码就用fs.readFile  res.setHeader(&#39;Content-Type&#39;,&#39;text/plain;charset=utf-8&#39;) res.end(&#39;你好哈哈哈哈’) else if(req.url===&#39;/login&#39;){ res.setHeader(&#39;Content-Type&#39;,&#39;text/html;charset=utf-8&#39;) res.end( &#39;&amp;lt;a href&amp;gt;百度&amp;lt;/a&amp;gt;&#39; ) } 当采用无分号的代码风格时，需要注意
+ 当一行代码是以：（ [ ` 开头的时候要加分号  </description>
+    </item>
+    
+    <item>
+      <title>Node.js中获取IP地址和端口号</title>
+      <link>https://jannyluo.github.io/post/node.js%E4%B8%AD%E8%8E%B7%E5%8F%96ip%E5%9C%B0%E5%9D%80%E5%92%8C%E7%AB%AF%E5%8F%A3%E5%8F%B7/</link>
+      <pubDate>Thu, 18 Jun 2020 22:07:28 +0800</pubDate>
+      
+      <guid>https://jannyluo.github.io/post/node.js%E4%B8%AD%E8%8E%B7%E5%8F%96ip%E5%9C%B0%E5%9D%80%E5%92%8C%E7%AB%AF%E5%8F%A3%E5%8F%B7/</guid>
+      <description> IP地址用来定位计算机， 端口号用来定位具体的应用程序 所有需要联网的软件都需要有端口号  server.on(&#39;request&#39;,function (request,response) { console.log(&#39;请求的路径是：&#39;+request.socket.remoteAddress)   端口号是: request.socket.remotePort
+  端口号的范围：0—65536
+  在计算机中有一些默认你的端口号，不要去使用:例如http服务的80
+  </description>
+    </item>
+    
+    <item>
+      <title>Node.js中简单的模块化</title>
+      <link>https://jannyluo.github.io/post/node.js%E4%B8%AD%E7%AE%80%E5%8D%95%E7%9A%84%E6%A8%A1%E5%9D%97%E5%8C%96/</link>
+      <pubDate>Thu, 18 Jun 2020 22:05:34 +0800</pubDate>
+      
+      <guid>https://jannyluo.github.io/post/node.js%E4%B8%AD%E7%AE%80%E5%8D%95%E7%9A%84%E6%A8%A1%E5%9D%97%E5%8C%96/</guid>
+      <description> 用require来引用别的文件  require（’./b.js’）//可以省略后缀名js 2. node中没有全局作用域，只有模块作用域//外部不能访问内部，内部不能访问外部！//文件作用域 3. require方法有两个作用：
+   加载文件并执行里面的代码    拿到被加载文件模块导出的接口对象     每一个文件模块中都提供了一个对象：exports exports默认是一个空对象 你要做的就是把所有需要被外部访问的成员挂载到exports对象中。 a.js  var bExport=require(&#39;./demo例子&#39;) console.log(bExport.add(2,3)) b.js exports.add=function(a,b) { return a*b; } </description>
+    </item>
+    
+    <item>
+      <title>Node.js中的读写文件</title>
+      <link>https://jannyluo.github.io/post/node-js%E4%B8%AD%E7%9A%84%E8%AF%BB%E5%86%99%E6%96%87%E4%BB%B6/</link>
+      <pubDate>Thu, 18 Jun 2020 22:03:56 +0800</pubDate>
+      
+      <guid>https://jannyluo.github.io/post/node-js%E4%B8%AD%E7%9A%84%E8%AF%BB%E5%86%99%E6%96%87%E4%BB%B6/</guid>
+      <description> node中的js具有文件操作的能力  var fs=require（’fs’）//使用require方法加载fs核心模块 fs.readFile(‘./demo.txt’,function(error,data){ console.log() }  有两个参数，第一个是文件路径，第二个是一个回调函数。 function的两个参数： 成功 data&amp;ndash;数据 error&amp;ndash;null 失败 data—null error&amp;ndash;错误对象  node写入文件  var fs=require（’fs’） fs.writeFile(‘./demo1.txt’,’hellohowareyou’,’function(error){ If(error) { console.log(‘fail&#39;) } Else(){console.log(’SUCCESS!’)}   有三个参数：路径，内容，回调函数
+  成功： error是null
+  失败： error是错误对象
+  Node为js提供了很多服务器级别的API，这些API绝大多数都被包装到了一个具名 的核心模块中，例如文件操作的fs模块，http服务器构建的http模块，path路径操作模块，os操作信息模块。
+  </description>
+    </item>
+    
+    <item>
+      <title>Node.js中的http服务</title>
+      <link>https://jannyluo.github.io/post/node.js%E4%B8%AD%E7%9A%84http%E6%9C%8D%E5%8A%A1/</link>
+      <pubDate>Thu, 18 Jun 2020 22:01:31 +0800</pubDate>
+      
+      <guid>https://jannyluo.github.io/post/node.js%E4%B8%AD%E7%9A%84http%E6%9C%8D%E5%8A%A1/</guid>
+      <description>构建一个web服务器
+在node中提供了一个核心模块：http（创建编写服务器）
+ 加载http核心模块 var http=require（’http’） 创建一个web服务器，返回一个server实例 var server=http.createServer( ) 服务器要干嘛   提供服务 发请求 接受请求 处理请求 给个反馈（发送响应） 注册request请求事件 当客户端请求过来，就会自动触发服务器的request请求事件，然后执行第二个参数（回调函数） server.on(‘request’, function(request, response){}） response可以向客户端响应内容 reponse.write(&#39;&#39;) 结尾一定要加 reponse.end( ) 否则无法响应！！！！！ response.end()  上面这种方式几乎不用，要用到
+ response.end(&#39;&#39;) 4.绑定端口号，启动服务器 server.listen(3000,function(){})  </description>
+    </item>
+    
+    <item>
+      <title>小程序中组件</title>
+      <link>https://jannyluo.github.io/post/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E4%B8%AD%E7%BB%84%E4%BB%B6/</link>
+      <pubDate>Thu, 18 Jun 2020 21:58:54 +0800</pubDate>
+      
+      <guid>https://jannyluo.github.io/post/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E4%B8%AD%E7%BB%84%E4%BB%B6/</guid>
+      <description>swiper轮播图组件 &amp;lt;swiper&amp;gt; &amp;lt;swiper-item&amp;gt;&amp;lt;image src=‘’/&amp;gt;&amp;lt;/swiper-item&amp;gt; &amp;lt;/swiper&amp;gt; 默认高度：150px，image也存在默认的高度
+swiper 高度=swiper宽度 * 原图的高度 / 原图的宽度
+ swiper的height： 100vw * 原图的高度 / 原图的宽度  swiper{ Width:100% Height:calc(100vw * 原图的高度 / 原图的宽度) } Image{ Width:100% } 轮播图属性：
+ autoplay interval（修改轮播时间） circular（与interval配合） indicator-dots（面板知识点） indicator-color（未选中的颜色） indicator-active-color（选中的颜色）  ##Navigator导航 属性：
+ url指定页面路径，不加后缀名 open-type 跳转的方式：   默认值 ：navigate（不能跳到tabbar的页面） redirect （跳转不保留原来的页面，没有返回按钮） switchTab（跳转到tabbar页面，并且关闭所有其他非tabbar的页面） reLaunch （关闭所有页面，随便跳转到哪个页面）  </description>
+    </item>
+    
+    <item>
+      <title>小程序中的标签使用</title>
+      <link>https://jannyluo.github.io/post/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E4%B8%AD%E7%9A%84%E6%A0%87%E7%AD%BE%E4%BD%BF%E7%94%A8/</link>
+      <pubDate>Thu, 18 Jun 2020 21:52:18 +0800</pubDate>
+      
+      <guid>https://jannyluo.github.io/post/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E4%B8%AD%E7%9A%84%E6%A0%87%E7%AD%BE%E4%BD%BF%E7%94%A8/</guid>
+      <description>#小程序中的标签 text标签（相当于span标签）：
+ 文本标签 只能嵌套text 长按文字可以复制的属性：selectable 是否解码：decode   block标签不显示
+ View标签相当于div
+ image图片标签：
+ Src指定加载图片的路径（用网络图片） mode决定图片宽高适配：   默认值：scaleToFill（不做纵横比例） aspectFit（保持宽高比，保证图片的长边能够完全显示） aspectFill（保持宽高比，保证图片的短边能够完全显示，少用） widthFix（宽度指定之后，高度会按比例自己调整，常用）  小程序中的图片是直接支持懒加载的 lazy-load   rich-text富文本标签 node属性：
+ 接收标签字符串&amp;lt;rich-text node=“{{html}}&amp;quot;&amp;gt; 接收对象数组   button标签 属性：
+ size（default、mini） type控制按钮颜色 （default：灰色、primary：绿色、warn：红色） plain按钮是否镂空，背景色透明 loading 是否加入等待图标 开放能力： open-type属性 contact：打开客服对话 share：转发（不能把小程序分享到朋友圈） getPhoneNumber：获取手机号码信息：绑定一个事件bindgetphonenumber、在实践的回调函数中通过参数获取信息func（e）{} getUserInfo：获取个人信息: bindgetuserinfo事件 launchApp：在小程序中直接打开app openSetting：打开小程序内置的授权页面 feedback：打开小程序内置的意见反馈页面   icon标签：
+ type属性：类型 size属性 color属性   radio单选框 &amp;lt;radio-group bindchange=‘&#39;&amp;gt; &amp;lt;radio value=&#39;&#39;&amp;gt;&amp;lt;/radio&amp;gt;</description>
+    </item>
+    
+    <item>
+      <title>小程序的生命周期函数</title>
+      <link>https://jannyluo.github.io/post/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E7%9A%84%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E5%87%BD%E6%95%B0/</link>
+      <pubDate>Thu, 18 Jun 2020 19:58:32 +0800</pubDate>
+      
+      <guid>https://jannyluo.github.io/post/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E7%9A%84%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E5%87%BD%E6%95%B0/</guid>
+      <description>在app.js中
+ onLaunch( )：应用第一次启动就会触发的事件，获取用户的个人信息 onShow( )：应用被用户看到，对应用的数据或页面效果重置 onHide( )：应用被隐藏，暂停或者清除定时器 onError（err）：应用代码发生报错，收集用户的错误信息，通过异步请求将错误信息发送到后台 onPageNotFound（ ）：应用第一次启动的时候如果找不到第一个入口页面才会触发，如果页面不存在了，可以通过js的方式跳转页面，重新跳转到第二个首页（不能跳到tabbar）   onPageNotFound（）{ Wx.navigateTo({ Url:’/pages/demo09/demo09&#39; }) } 页面的生命周期函数
+ onLoad：function（options）{ } :监听页面加载 onShow：function（）{ }: 监听页面显示 onReady：function（） { }: 监听页面初次渲染完成 onHide：function（）{}:监听页面隐藏 onUnload：function（ ） {}： 关闭当前页面等于卸载当前页面，查看navigator的参数是保留当前页面还是关闭当前页面 onPullDownRefresh： function（）{}:监听用户下拉动作 onReachBottom： function（）{}: 监听页面上拉触底事件，要让页面有滚动条才行（加载下一页数据） onShareAppMessage： function（）{}:用户点击右上角分享 onPageScroll ：function（) {}:页面滚动就会触发 onResize：function（）{}:页面尺寸发生改变的时候触发（横屏竖屏切换）**开启页面的横屏竖屏切换：**在json文件中加入&amp;quot;pageOrientation&amp;quot;：&amp;quot;auto&amp;quot; onTabItemTap：function（）{}: 1、必须要求当前的页面也是tabbar页面，点击自己的tab item时才会触发  </description>
+    </item>
+    
+  </channel>
+</rss>
