@@ -227,6 +227,30 @@
         <article class="entry-single">
   
   <header class="entry-header">
+    <h3 class="entry-title"><a href="https://jannyluo.github.io/post/node.js%E4%B8%AD%E7%9A%84http%E6%9C%8D%E5%8A%A1/" title="Node.js中的http服务" class="entry-link">Node.js中的http服务</a></h3>
+  </header>
+
+  <p class="entry-summary">构建一个web服务器
+在node中提供了一个核心模块：http（创建编写服务器）
+ 加载http核心模块 var http=require（’http’） 创建一个web服务器，返回一个server实例 var server=http.createServer( ) 服务器要干嘛   提供服务 发请求 接受请求 处理请求 给个反馈（发送响应） 注册request请求事件 当客户端请求过来，就会自动触发服务器的request请求事件，然后执行第二个参数（回调函数） server.on(‘request’, function(request, response){}） response可以向客户端响应内容 reponse.write(&#39;&#39;) 结尾一定要加 reponse.end( ) 否则无法响应！！！！！ response.end()  上面这种方式几乎不用，要用到
+ response.end(&#39;&#39;) 4.绑定端口号，启动服务器 server.listen(3000,function(){})  </p>
+  <footer class="entry-footer">
+    <p class="entry-meta"><span class="entry-time">Jun 18, 2020</span> 1 min read</p>
+    <div class="sharing">
+      <a class="share share-facebook" target="_blank" href="https://facebook.com/sharer/sharer.php?u=https%3a%2f%2fjannyluo.github.io%2fpost%2fnode.js%25E4%25B8%25AD%25E7%259A%2584http%25E6%259C%258D%25E5%258A%25A1%2f" title="Share on Facebook">
+        <svg class="icon" fill="currentColor"><use xlink:href="#icon-facebook" /></svg>
+      </a>
+      <a class="share share-twitter" target="_blank" href="https://twitter.com/intent/tweet/?text=Node.js%e4%b8%ad%e7%9a%84http%e6%9c%8d%e5%8a%a1&amp;url=https%3a%2f%2fjannyluo.github.io%2fpost%2fnode.js%25E4%25B8%25AD%25E7%259A%2584http%25E6%259C%258D%25E5%258A%25A1%2f" title="Share on Twitter">
+        <svg class="icon share-twitter-icon" fill="currentColor"><use xlink:href="#icon-twitter" /></svg>
+      </a>
+    </div>
+  </footer>
+</article>
+
+      
+        <article class="entry-single">
+  
+  <header class="entry-header">
     <h3 class="entry-title"><a href="https://jannyluo.github.io/post/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E4%B8%AD%E7%BB%84%E4%BB%B6/" title="小程序中组件" class="entry-link">小程序中组件</a></h3>
   </header>
 

@@ -6,10 +6,21 @@
     <description>Recent content in notes on Janny</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 18 Jun 2020 22:30:33 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 23 Jun 2020 20:43:36 +0800</lastBuildDate>
     
 	<atom:link href="https://jannyluo.github.io/categories/notes/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>小程序中微信支付的业务逻辑</title>
+      <link>https://jannyluo.github.io/post/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E4%B8%AD%E5%BE%AE%E4%BF%A1%E6%94%AF%E4%BB%98%E7%9A%84%E4%B8%9A%E5%8A%A1%E9%80%BB%E8%BE%91/</link>
+      <pubDate>Tue, 23 Jun 2020 20:43:36 +0800</pubDate>
+      
+      <guid>https://jannyluo.github.io/post/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E4%B8%AD%E5%BE%AE%E4%BF%A1%E6%94%AF%E4%BB%98%E7%9A%84%E4%B8%9A%E5%8A%A1%E9%80%BB%E8%BE%91/</guid>
+      <description>微信支付  微信支付功能只有企业账号才能实施  创建订单  获取用户登录成功后的 token值    获取token值，首先要获取5个参数，分别是 【encryptedData、rawData、iv、signatrue、】【code】。前四个参数通过获取用户信息的到，第五个通过执行小程序登陆后的到
+  主要操作：判断缓存中若没有token值，则跳转到授权页面，通过button的open-type属性值为getUserInfo，回调函数为bindgetuserinfo的到四个参数。随后调用wx.login诱导用户登录可以得到code参数。5个参数都拿到之后，发起request请求token，并把token存到缓存中。
+  获取订单编号 order_number   准备发起请求需要的参数，后获得order_number  准备预支付  拿到上一步骤返回的order_number后，作为参数发起请求拿到pay  发起微信支付  通过wx.requestPayment(pay)发起微信支付，pay作为参数  查询订单  通过订单编号order_number作为参数发起请求查询订单  最后返回购物车界面之前，需要手动将已经付款的商品删除 </description>
+    </item>
     
     <item>
       <title>Js小基础</title>

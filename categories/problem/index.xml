@@ -6,10 +6,19 @@
     <description>Recent content in problem on Janny</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 19 Jun 2020 14:17:16 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 23 Jun 2020 20:42:53 +0800</lastBuildDate>
     
 	<atom:link href="https://jannyluo.github.io/categories/problem/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>小程序中微信支付的业务逻辑</title>
+      <link>https://jannyluo.github.io/posts/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E4%B8%AD%E5%BE%AE%E4%BF%A1%E6%94%AF%E4%BB%98%E7%9A%84%E4%B8%9A%E5%8A%A1%E9%80%BB%E8%BE%91/</link>
+      <pubDate>Tue, 23 Jun 2020 20:42:53 +0800</pubDate>
+      
+      <guid>https://jannyluo.github.io/posts/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E4%B8%AD%E5%BE%AE%E4%BF%A1%E6%94%AF%E4%BB%98%E7%9A%84%E4%B8%9A%E5%8A%A1%E9%80%BB%E8%BE%91/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Life</title>

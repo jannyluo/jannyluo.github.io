@@ -213,225 +213,20 @@
         <article class="entry-single">
   
   <header class="entry-header">
-    <h3 class="entry-title"><a href="https://jannyluo.github.io/post/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E4%B8%AD%E5%BE%AE%E4%BF%A1%E6%94%AF%E4%BB%98%E7%9A%84%E4%B8%9A%E5%8A%A1%E9%80%BB%E8%BE%91/" title="小程序中微信支付的业务逻辑" class="entry-link">小程序中微信支付的业务逻辑</a></h3>
+    <h3 class="entry-title"><a href="https://jannyluo.github.io/hugo/getting-started/" title="Getting Started With Hugo" class="entry-link">Getting Started With Hugo</a></h3>
   </header>
 
-  <p class="entry-summary">微信支付  微信支付功能只有企业账号才能实施  创建订单  获取用户登录成功后的 token值    获取token值，首先要获取5个参数，分别是 【encryptedData、rawData、iv、signatrue、】【code】。前四个参数通过获取用户信息的到，第五个通过执行小程序登陆后的到
-  主要操作：判断缓存中若没有token值，则跳转到授权页面，通过button的open-type属性值为getUserInfo，回调函数为bindgetuserinfo的到四个参数。随后调用wx.login诱导用户登录可以得到code参数。5个参数都拿到之后，发起request请求token，并把token存到缓存中。
-  获取订单编号 order_number   准备发起请求需要的参数，后获得order_number  准备预支付  拿到上一步骤返回的order_number后，作为参数发起请求拿到pay  发起微信支付  通过wx.requestPayment(pay)发起微信支付，pay作为参数  查询订单  通过订单编号order_number作为参数发起请求查询订单  最后返回购物车界面之前，需要手动将已经付款的商品删除 </p>
+  <p class="entry-summary">Step 1: Install Hugo brew install hugo To verify your new install:
+hugo version Step 2: Create a New Site hugo new site quickstart The above will create a new Hugo site in a folder named quickstart.
+Step 3: Add a Theme See themes.gohugo.io for a list of themes to consider. This quickstart uses the beautiful Ananke theme.
+cd quickstart;\ git init;\ git submodule add https://github.com/budparr/gohugo-theme-ananke.git themes/ananke;\  # Edit your config.</p>
   <footer class="entry-footer">
-    <p class="entry-meta"><span class="entry-time">Jun 23, 2020</span> 1 min read</p>
+    <p class="entry-meta"><span class="entry-time">May 28, 2018</span> 2 min read</p>
     <div class="sharing">
-      <a class="share share-facebook" target="_blank" href="https://facebook.com/sharer/sharer.php?u=https%3a%2f%2fjannyluo.github.io%2fpost%2f%25E5%25B0%258F%25E7%25A8%258B%25E5%25BA%258F%25E4%25B8%25AD%25E5%25BE%25AE%25E4%25BF%25A1%25E6%2594%25AF%25E4%25BB%2598%25E7%259A%2584%25E4%25B8%259A%25E5%258A%25A1%25E9%2580%25BB%25E8%25BE%2591%2f" title="Share on Facebook">
+      <a class="share share-facebook" target="_blank" href="https://facebook.com/sharer/sharer.php?u=https%3a%2f%2fjannyluo.github.io%2fhugo%2fgetting-started%2f" title="Share on Facebook">
         <svg class="icon" fill="currentColor"><use xlink:href="#icon-facebook" /></svg>
       </a>
-      <a class="share share-twitter" target="_blank" href="https://twitter.com/intent/tweet/?text=%e5%b0%8f%e7%a8%8b%e5%ba%8f%e4%b8%ad%e5%be%ae%e4%bf%a1%e6%94%af%e4%bb%98%e7%9a%84%e4%b8%9a%e5%8a%a1%e9%80%bb%e8%be%91&amp;url=https%3a%2f%2fjannyluo.github.io%2fpost%2f%25E5%25B0%258F%25E7%25A8%258B%25E5%25BA%258F%25E4%25B8%25AD%25E5%25BE%25AE%25E4%25BF%25A1%25E6%2594%25AF%25E4%25BB%2598%25E7%259A%2584%25E4%25B8%259A%25E5%258A%25A1%25E9%2580%25BB%25E8%25BE%2591%2f" title="Share on Twitter">
-        <svg class="icon share-twitter-icon" fill="currentColor"><use xlink:href="#icon-twitter" /></svg>
-      </a>
-    </div>
-  </footer>
-</article>
-
-      
-        <article class="entry-single">
-  
-    <a href="https://jannyluo.github.io/post/life/" title="Life">
-      <amp-img alt="Life"
-        height="244"
-        layout="fixed-height"
-        class="entry-cover"
-        src="https://ae01.alicdn.com/kf/H6bbd819bec804d87b085e7d4e98c7ed3E.jpg">
-      </amp-img>
-    </a>
-  
-  <header class="entry-header">
-    <h3 class="entry-title"><a href="https://jannyluo.github.io/post/life/" title="Life" class="entry-link">Life</a></h3>
-  </header>
-
-  <p class="entry-summary">Life Is Boring</p>
-  <footer class="entry-footer">
-    <p class="entry-meta"><span class="entry-time">Jun 19, 2020</span> 1 min read</p>
-    <div class="sharing">
-      <a class="share share-facebook" target="_blank" href="https://facebook.com/sharer/sharer.php?u=https%3a%2f%2fjannyluo.github.io%2fpost%2flife%2f" title="Share on Facebook">
-        <svg class="icon" fill="currentColor"><use xlink:href="#icon-facebook" /></svg>
-      </a>
-      <a class="share share-twitter" target="_blank" href="https://twitter.com/intent/tweet/?text=Life&amp;url=https%3a%2f%2fjannyluo.github.io%2fpost%2flife%2f" title="Share on Twitter">
-        <svg class="icon share-twitter-icon" fill="currentColor"><use xlink:href="#icon-twitter" /></svg>
-      </a>
-    </div>
-  </footer>
-</article>
-
-      
-        <article class="entry-single">
-  
-  <header class="entry-header">
-    <h3 class="entry-title"><a href="https://jannyluo.github.io/post/webpack%E6%89%93%E5%8C%85%E6%8A%A5%E9%94%99module/" title="Webpack打包报错module not found" class="entry-link">Webpack打包报错module not found</a></h3>
-  </header>
-
-  <p class="entry-summary"> 刚接触webpack 使用命令webpack ./src/main.js ./dist/bundle.js打包时报错如下：   后查资料发现是因为版本过高，
-成功的打包命令是： webpack ./src/main.js -o ./dist/bundle.js
- 打包成功的截图： version版本号：4.43.0  </p>
-  <footer class="entry-footer">
-    <p class="entry-meta"><span class="entry-time">Jun 18, 2020</span> 1 min read</p>
-    <div class="sharing">
-      <a class="share share-facebook" target="_blank" href="https://facebook.com/sharer/sharer.php?u=https%3a%2f%2fjannyluo.github.io%2fpost%2fwebpack%25E6%2589%2593%25E5%258C%2585%25E6%258A%25A5%25E9%2594%2599module%2f" title="Share on Facebook">
-        <svg class="icon" fill="currentColor"><use xlink:href="#icon-facebook" /></svg>
-      </a>
-      <a class="share share-twitter" target="_blank" href="https://twitter.com/intent/tweet/?text=Webpack%e6%89%93%e5%8c%85%e6%8a%a5%e9%94%99module%20not%20found&amp;url=https%3a%2f%2fjannyluo.github.io%2fpost%2fwebpack%25E6%2589%2593%25E5%258C%2585%25E6%258A%25A5%25E9%2594%2599module%2f" title="Share on Twitter">
-        <svg class="icon share-twitter-icon" fill="currentColor"><use xlink:href="#icon-twitter" /></svg>
-      </a>
-    </div>
-  </footer>
-</article>
-
-      
-        <article class="entry-single">
-  
-  <header class="entry-header">
-    <h3 class="entry-title"><a href="https://jannyluo.github.io/post/%E7%9B%B4%E6%8E%A5%E8%BE%93%E5%85%A5webpack%E6%89%93%E5%8C%85%E6%8A%A5%E9%94%99insufficient/" title="直接输入webpack打包报错Insufficient number of arguments or no entry found. " class="entry-link">直接输入webpack打包报错Insufficient number of arguments or no entry found. </a></h3>
-  </header>
-
-  <p class="entry-summary"> webpack version：4.43.0*  问题： 直接在项目下输入webpack打包报错
-Insufficient number of arguments or no entry found.
-解决方法：  首先在项目根目录下创建名为：webpack.config.js文件  在创建的webpack.config.js文件编辑如下代码 注意： 修改代码的入口/出口文件的路径和要输出的文件名称  const path = require(&#39;path&#39;) module.exports = { //指定入口，表示webpack要打包哪个文件  entry: path.join(__dirname,&#39;./src/main.js&#39;), //指定出口，表示打包好的文件输出到哪个目录  output:{ path:path.join(__dirname,&#39;./dist&#39;), //指定输出文件的名称  filename:&#39;bundle1.js&#39; } }  保存后重新在terminal输入webpack成功打包：*   </p>
-  <footer class="entry-footer">
-    <p class="entry-meta"><span class="entry-time">Jun 18, 2020</span> 1 min read</p>
-    <div class="sharing">
-      <a class="share share-facebook" target="_blank" href="https://facebook.com/sharer/sharer.php?u=https%3a%2f%2fjannyluo.github.io%2fpost%2f%25E7%259B%25B4%25E6%258E%25A5%25E8%25BE%2593%25E5%2585%25A5webpack%25E6%2589%2593%25E5%258C%2585%25E6%258A%25A5%25E9%2594%2599insufficient%2f" title="Share on Facebook">
-        <svg class="icon" fill="currentColor"><use xlink:href="#icon-facebook" /></svg>
-      </a>
-      <a class="share share-twitter" target="_blank" href="https://twitter.com/intent/tweet/?text=%e7%9b%b4%e6%8e%a5%e8%be%93%e5%85%a5webpack%e6%89%93%e5%8c%85%e6%8a%a5%e9%94%99Insufficient%20number%20of%20arguments%20or%20no%20entry%20found.%20&amp;url=https%3a%2f%2fjannyluo.github.io%2fpost%2f%25E7%259B%25B4%25E6%258E%25A5%25E8%25BE%2593%25E5%2585%25A5webpack%25E6%2589%2593%25E5%258C%2585%25E6%258A%25A5%25E9%2594%2599insufficient%2f" title="Share on Twitter">
-        <svg class="icon share-twitter-icon" fill="currentColor"><use xlink:href="#icon-twitter" /></svg>
-      </a>
-    </div>
-  </footer>
-</article>
-
-      
-        <article class="entry-single">
-  
-  <header class="entry-header">
-    <h3 class="entry-title"><a href="https://jannyluo.github.io/post/js%E5%B0%8F%E5%9F%BA%E7%A1%80/" title="Js小基础" class="entry-link">Js小基础</a></h3>
-  </header>
-
-  <p class="entry-summary">字符串数组：  length属性无法获取字符串索引的元素。 无法使用for循环遍历字符串索引的数组。 字符串数组可以使用for..in循环。   数组常用方法： 数组名.方法名   排序sort（） ：按字符串顺序排列，非string类型会自动转换为string类型。 反转数组 reverse（） 把数组拼接成一个字符串 join（）：默认将数组中的元素以逗号隔开。 以其他形式隔开：var str=array.join(“-“) 将多个数组拼接成一个数组 concat（）: array.concat(names) or array.concat(names, ages) toString 转换为字符串： 功能与没有参数的join（）方法相同 valueOf（）：输出时自动调用valueOf方法，不需要自己调用 迭代数组 forEach（） 向数组末尾添加元素 push（）  二维数组 var nums=new array(); nums[0]=new array(); nums[1]=new array(); 使用二重循环生成数组，输出数组： var nums=new Array(); for(var i=0;i&lt;4;i&#43;&#43;){ nums[i]=new Array; for(var j=0;j&lt;4;j&#43;&#43;){ nums[i][j]=parseInt(Math.random()*99&#43;1); } } for(var i=0;i&lt;nums.length;i&#43;&#43;){ for(var j=0;j&lt;nums[i].length;j&#43;&#43;){ document.write(nums[i][j]&#43;&#34;&amp;nbsp;&amp;nbsp;&#34;) } document.write(&#34;&lt;/br&gt;&#34;) }  冒泡排序法：两两进行比较 ，N个数字，比较N-1轮，每一轮比较N-i-1次。  var nums=[20,30,11,22,38,89,2]; for(var i=0;i&lt;nums.</p>
-  <footer class="entry-footer">
-    <p class="entry-meta"><span class="entry-time">Jun 18, 2020</span> 2 min read</p>
-    <div class="sharing">
-      <a class="share share-facebook" target="_blank" href="https://facebook.com/sharer/sharer.php?u=https%3a%2f%2fjannyluo.github.io%2fpost%2fjs%25E5%25B0%258F%25E5%259F%25BA%25E7%25A1%2580%2f" title="Share on Facebook">
-        <svg class="icon" fill="currentColor"><use xlink:href="#icon-facebook" /></svg>
-      </a>
-      <a class="share share-twitter" target="_blank" href="https://twitter.com/intent/tweet/?text=Js%e5%b0%8f%e5%9f%ba%e7%a1%80&amp;url=https%3a%2f%2fjannyluo.github.io%2fpost%2fjs%25E5%25B0%258F%25E5%259F%25BA%25E7%25A1%2580%2f" title="Share on Twitter">
-        <svg class="icon share-twitter-icon" fill="currentColor"><use xlink:href="#icon-twitter" /></svg>
-      </a>
-    </div>
-  </footer>
-</article>
-
-      
-        <article class="entry-single">
-  
-  <header class="entry-header">
-    <h3 class="entry-title"><a href="https://jannyluo.github.io/post/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E4%B8%AD%E7%88%B6%E5%AD%90%E7%BB%84%E4%BB%B6%E4%B9%8B%E9%97%B4%E4%BC%A0%E5%80%BC/" title="小程序中父子组件之间传值" class="entry-link">小程序中父子组件之间传值</a></h3>
-  </header>
-
-  <p class="entry-summary">子组件向父组件传值 子组件通过自定义参数传递，父组件在properties中接收
-properties：{ Tabs(属性名):{ Type:Array; (数据类型） Value:[ ] } } properties中的值和data中的值一样，可以直接使用
- 父组件向子组件传值 This.triggerEvent(“方法”,参数）  </p>
-  <footer class="entry-footer">
-    <p class="entry-meta"><span class="entry-time">Jun 18, 2020</span> 1 min read</p>
-    <div class="sharing">
-      <a class="share share-facebook" target="_blank" href="https://facebook.com/sharer/sharer.php?u=https%3a%2f%2fjannyluo.github.io%2fpost%2f%25E5%25B0%258F%25E7%25A8%258B%25E5%25BA%258F%25E4%25B8%25AD%25E7%2588%25B6%25E5%25AD%2590%25E7%25BB%2584%25E4%25BB%25B6%25E4%25B9%258B%25E9%2597%25B4%25E4%25BC%25A0%25E5%2580%25BC%2f" title="Share on Facebook">
-        <svg class="icon" fill="currentColor"><use xlink:href="#icon-facebook" /></svg>
-      </a>
-      <a class="share share-twitter" target="_blank" href="https://twitter.com/intent/tweet/?text=%e5%b0%8f%e7%a8%8b%e5%ba%8f%e4%b8%ad%e7%88%b6%e5%ad%90%e7%bb%84%e4%bb%b6%e4%b9%8b%e9%97%b4%e4%bc%a0%e5%80%bc&amp;url=https%3a%2f%2fjannyluo.github.io%2fpost%2f%25E5%25B0%258F%25E7%25A8%258B%25E5%25BA%258F%25E4%25B8%25AD%25E7%2588%25B6%25E5%25AD%2590%25E7%25BB%2584%25E4%25BB%25B6%25E4%25B9%258B%25E9%2597%25B4%25E4%25BC%25A0%25E5%2580%25BC%2f" title="Share on Twitter">
-        <svg class="icon share-twitter-icon" fill="currentColor"><use xlink:href="#icon-twitter" /></svg>
-      </a>
-    </div>
-  </footer>
-</article>
-
-      
-        <article class="entry-single">
-  
-  <header class="entry-header">
-    <h3 class="entry-title"><a href="https://jannyluo.github.io/post/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E7%9A%84%E7%BC%93%E5%AD%98/" title="小程序的缓存" class="entry-link">小程序的缓存</a></h3>
-  </header>
-
-  <p class="entry-summary"> 判断本地存储中有没有旧的数据。{time:Date.now(),data:[. ]} 没有旧的数据则重新发送请求 有旧的数据同时旧的数据没有过期则使用本地存储  const Cates=wx.getStorageSync(“cates”) If(!Cates){ this.getCates() }else{ If(Date.now()-Cates.time)&gt;1000*10){ this.getCates() }else{ this.Cates=Cates.data let leftMenuList=this.Cates.map(v=&gt;v.cat_name) let rightContent=this.Cates[0].children this.setData({ leftMenuList rightContent }) } } </p>
-  <footer class="entry-footer">
-    <p class="entry-meta"><span class="entry-time">Jun 18, 2020</span> 1 min read</p>
-    <div class="sharing">
-      <a class="share share-facebook" target="_blank" href="https://facebook.com/sharer/sharer.php?u=https%3a%2f%2fjannyluo.github.io%2fpost%2f%25E5%25B0%258F%25E7%25A8%258B%25E5%25BA%258F%25E7%259A%2584%25E7%25BC%2593%25E5%25AD%2598%2f" title="Share on Facebook">
-        <svg class="icon" fill="currentColor"><use xlink:href="#icon-facebook" /></svg>
-      </a>
-      <a class="share share-twitter" target="_blank" href="https://twitter.com/intent/tweet/?text=%e5%b0%8f%e7%a8%8b%e5%ba%8f%e7%9a%84%e7%bc%93%e5%ad%98&amp;url=https%3a%2f%2fjannyluo.github.io%2fpost%2f%25E5%25B0%258F%25E7%25A8%258B%25E5%25BA%258F%25E7%259A%2584%25E7%25BC%2593%25E5%25AD%2598%2f" title="Share on Twitter">
-        <svg class="icon share-twitter-icon" fill="currentColor"><use xlink:href="#icon-twitter" /></svg>
-      </a>
-    </div>
-  </footer>
-</article>
-
-      
-        <article class="entry-single">
-  
-  <header class="entry-header">
-    <h3 class="entry-title"><a href="https://jannyluo.github.io/post/node.js%E4%B8%AD%E7%9A%84%E6%A8%A1%E6%9D%BF%E5%BC%95%E6%93%8E/" title="Node.js中的模板引擎" class="entry-link">Node.js中的模板引擎</a></h3>
-  </header>
-
-  <p class="entry-summary"> 安装 npm install art-template 使用  Var template=require(‘art-template’) Var fs=reqiure(‘fs’) Fs.readfile(‘./tpl.html’,function(err,data){ If(err){ } Var ret=template.render(data.toString(),{ Name:’jack’, Age:’18’, Province:’Beijing’, Hobbies:[ ‘写代码’， ’唱歌’， ‘打游戏’] }) Tpl.html的内容：
-大家好，我叫:{{ name }} 我今年：{{ age }} 我来自： {{ province }} 我喜欢： {{ each hobbies }} {{ $value }} {{/each}}  模板引擎不关心内容，只关心{{ }}  </p>
-  <footer class="entry-footer">
-    <p class="entry-meta"><span class="entry-time">Jun 18, 2020</span> 1 min read</p>
-    <div class="sharing">
-      <a class="share share-facebook" target="_blank" href="https://facebook.com/sharer/sharer.php?u=https%3a%2f%2fjannyluo.github.io%2fpost%2fnode.js%25E4%25B8%25AD%25E7%259A%2584%25E6%25A8%25A1%25E6%259D%25BF%25E5%25BC%2595%25E6%2593%258E%2f" title="Share on Facebook">
-        <svg class="icon" fill="currentColor"><use xlink:href="#icon-facebook" /></svg>
-      </a>
-      <a class="share share-twitter" target="_blank" href="https://twitter.com/intent/tweet/?text=Node.js%e4%b8%ad%e7%9a%84%e6%a8%a1%e6%9d%bf%e5%bc%95%e6%93%8e&amp;url=https%3a%2f%2fjannyluo.github.io%2fpost%2fnode.js%25E4%25B8%25AD%25E7%259A%2584%25E6%25A8%25A1%25E6%259D%25BF%25E5%25BC%2595%25E6%2593%258E%2f" title="Share on Twitter">
-        <svg class="icon share-twitter-icon" fill="currentColor"><use xlink:href="#icon-twitter" /></svg>
-      </a>
-    </div>
-  </footer>
-</article>
-
-      
-        <article class="entry-single">
-  
-  <header class="entry-header">
-    <h3 class="entry-title"><a href="https://jannyluo.github.io/post/node.js%E4%B8%AD%E7%9A%84%E7%9B%AE%E5%BD%95%E6%B8%B2%E6%9F%93/" title="Node.js中的目录渲染" class="entry-link">Node.js中的目录渲染</a></h3>
-  </header>
-
-  <p class="entry-summary"> 在模板template.html中需要替换的位置预留一个特殊的标记 根据files生成需要的html内容  server.on(‘request’,function(req,res){ Fs.readfile(‘/‘.function(err,data){ If(err){ Return res.end(‘404 not found’) } Res.end(data) } fs.readdir(‘/‘,function(err, files){ If(err){} Var content=` ` Files.forEach(function(item){ content&#43;=`&lt;tr&gt;//${item}/&lt;/tr&gt; } data=data.toString() data=data.replace(data&amp;,content) Res.end(data) } })  ${}可以用来引用变量  </p>
-  <footer class="entry-footer">
-    <p class="entry-meta"><span class="entry-time">Jun 18, 2020</span> 1 min read</p>
-    <div class="sharing">
-      <a class="share share-facebook" target="_blank" href="https://facebook.com/sharer/sharer.php?u=https%3a%2f%2fjannyluo.github.io%2fpost%2fnode.js%25E4%25B8%25AD%25E7%259A%2584%25E7%259B%25AE%25E5%25BD%2595%25E6%25B8%25B2%25E6%259F%2593%2f" title="Share on Facebook">
-        <svg class="icon" fill="currentColor"><use xlink:href="#icon-facebook" /></svg>
-      </a>
-      <a class="share share-twitter" target="_blank" href="https://twitter.com/intent/tweet/?text=Node.js%e4%b8%ad%e7%9a%84%e7%9b%ae%e5%bd%95%e6%b8%b2%e6%9f%93&amp;url=https%3a%2f%2fjannyluo.github.io%2fpost%2fnode.js%25E4%25B8%25AD%25E7%259A%2584%25E7%259B%25AE%25E5%25BD%2595%25E6%25B8%25B2%25E6%259F%2593%2f" title="Share on Twitter">
-        <svg class="icon share-twitter-icon" fill="currentColor"><use xlink:href="#icon-twitter" /></svg>
-      </a>
-    </div>
-  </footer>
-</article>
-
-      
-        <article class="entry-single">
-  
-  <header class="entry-header">
-    <h3 class="entry-title"><a href="https://jannyluo.github.io/post/node.js%E4%B8%AD%E7%9A%84%E7%BC%96%E7%A0%81%E9%97%AE%E9%A2%98/" title="Node.js中的编码问题" class="entry-link">Node.js中的编码问题</a></h3>
-  </header>
-
-  <p class="entry-summary">node.js中的编码问题  在服务器默认发送的数据，其实是utf8编码的内容 但浏览器不知道你是utf8编码的内容 浏览器在不知道服务器响应内容的编码的情况下会按照当前操作系统的默认编码去解析 中文操作系统默认是gbk 解决方法就是正确的告诉浏览器我发送给你的内容是什么编码的 在http协议中，Content-Type就是用来告知对方数据的类型 Text/plain是普通文本 text/html是html代码 image/jpeg   如果要引用其他文件的html代码就用fs.readFile  res.setHeader(&#39;Content-Type&#39;,&#39;text/plain;charset=utf-8&#39;) res.end(&#39;你好哈哈哈哈’) else if(req.url===&#39;/login&#39;){ res.setHeader(&#39;Content-Type&#39;,&#39;text/html;charset=utf-8&#39;) res.end( &#39;&lt;a href&gt;百度&lt;/a&gt;&#39; ) } 当采用无分号的代码风格时，需要注意
- 当一行代码是以：（ [ ` 开头的时候要加分号  </p>
-  <footer class="entry-footer">
-    <p class="entry-meta"><span class="entry-time">Jun 18, 2020</span> 1 min read</p>
-    <div class="sharing">
-      <a class="share share-facebook" target="_blank" href="https://facebook.com/sharer/sharer.php?u=https%3a%2f%2fjannyluo.github.io%2fpost%2fnode.js%25E4%25B8%25AD%25E7%259A%2584%25E7%25BC%2596%25E7%25A0%2581%25E9%2597%25AE%25E9%25A2%2598%2f" title="Share on Facebook">
-        <svg class="icon" fill="currentColor"><use xlink:href="#icon-facebook" /></svg>
-      </a>
-      <a class="share share-twitter" target="_blank" href="https://twitter.com/intent/tweet/?text=Node.js%e4%b8%ad%e7%9a%84%e7%bc%96%e7%a0%81%e9%97%ae%e9%a2%98&amp;url=https%3a%2f%2fjannyluo.github.io%2fpost%2fnode.js%25E4%25B8%25AD%25E7%259A%2584%25E7%25BC%2596%25E7%25A0%2581%25E9%2597%25AE%25E9%25A2%2598%2f" title="Share on Twitter">
+      <a class="share share-twitter" target="_blank" href="https://twitter.com/intent/tweet/?text=Getting%20Started%20With%20Hugo&amp;url=https%3a%2f%2fjannyluo.github.io%2fhugo%2fgetting-started%2f" title="Share on Twitter">
         <svg class="icon share-twitter-icon" fill="currentColor"><use xlink:href="#icon-twitter" /></svg>
       </a>
     </div>
@@ -443,8 +238,8 @@ properties：{ Tabs(属性名):{ Type:Array; (数据类型） Value:[ ] } } prop
     
       <nav class="pagination">
         
+          <a class="pagination-btn" href="/page/2/">← Newer Posts</a>
         
-          <a class="pagination-btn pagination-next" href="/page/2/">Older Posts →</a>
         
       </nav>
     

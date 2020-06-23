@@ -6,10 +6,28 @@
     <description>Recent content in Categories on Janny</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 19 Jun 2020 14:17:35 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 23 Jun 2020 20:43:36 +0800</lastBuildDate>
     
 	<atom:link href="https://jannyluo.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>notes</title>
+      <link>https://jannyluo.github.io/categories/notes/</link>
+      <pubDate>Tue, 23 Jun 2020 20:43:36 +0800</pubDate>
+      
+      <guid>https://jannyluo.github.io/categories/notes/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>problem</title>
+      <link>https://jannyluo.github.io/categories/problem/</link>
+      <pubDate>Tue, 23 Jun 2020 20:42:53 +0800</pubDate>
+      
+      <guid>https://jannyluo.github.io/categories/problem/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>life</title>
@@ -17,24 +35,6 @@
       <pubDate>Fri, 19 Jun 2020 14:17:35 +0800</pubDate>
       
       <guid>https://jannyluo.github.io/categories/life/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>problem</title>
-      <link>https://jannyluo.github.io/categories/problem/</link>
-      <pubDate>Fri, 19 Jun 2020 14:17:16 +0800</pubDate>
-      
-      <guid>https://jannyluo.github.io/categories/problem/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>notes</title>
-      <link>https://jannyluo.github.io/categories/notes/</link>
-      <pubDate>Thu, 18 Jun 2020 22:30:33 +0800</pubDate>
-      
-      <guid>https://jannyluo.github.io/categories/notes/</guid>
       <description></description>
     </item>
     
